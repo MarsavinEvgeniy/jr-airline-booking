@@ -1,0 +1,15 @@
+@font-face {
+    font-family: 'FontInter';
+    src: url(/src/fonts/inter/Inter-Italic-VariableFont_opsz,wght.ttf) format('ttf'),
+    url(/src/fonts/inter/Inter-VariableFont_opsz,wght.ttf) format('ttf');
+}
+
+:root {
+    --main-color-one: #6E36F7;
+    --main-color-two: #FFFFFF;
+    --accent-color: #FF4D4D;
+}
+
+html, body {
+    font-family: 'FontInter', sans-serif;
+}
