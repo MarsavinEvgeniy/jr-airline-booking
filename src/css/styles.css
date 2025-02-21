@@ -16,12 +16,6 @@ html, body {
 }
 
 .container-header {
-    margin-left: 20%;
-    margin-right: 20%;
-    padding-bottom: 20px;
-}
-
-header {
     background: #7413dc;
     padding: 10px;
 }
@@ -90,7 +84,7 @@ header {
     box-shadow: none;
 }
 
-.difficult-route{
+.difficult-route {
     color: #d5d8dc;
     opacity: 0.9;
     font-size: 12px;
@@ -98,7 +92,125 @@ header {
     cursor: pointer;
 }
 
-.difficult-route:before{
+.difficult-route:before {
     content: "🪑";
     margin-right: 8px;
+}
+
+.container-main {
+    display: grid;
+    padding: 20px;
+}
+
+.bus-tickets, .popular-destinations, .top-airlines, .frequently-asked-questions, .manage-your-tickets-on-Telegram {
+    width: 50%;
+    background: var(--main-color-two);
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.best-offers {
+    width: 50%;
+    background: #bebff6;
+    border-radius: 5px;
+    padding: 10px;
+}
+.best-offers input{
+    color: var(--accent-color);
+    padding: 10px;
+    border-radius: 5px;
+}
+.best-offers button{
+    background: var(--accent-color);
+    border: none;
+    border-radius: 5px;
+    color: var(--main-color-two);
+    padding: 10px;
+}
+.manage-your-tickets-on-Telegram ul {
+    list-style: none;
+}
+
+.manage-your-tickets-on-Telegram li {
+    display: inline-block;
+}
+
+.manage-your-tickets-on-Telegram li:before {
+    content: '✔';
+    top: 0;
+    left: 0;
+    color: green;
+}
+
+.manage-your-tickets-on-Telegram button {
+    background: #f8dcd6;
+    border-radius: 5px;
+    border: none;
+    color: var(--accent-color);
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.bus-tickets ul {
+    list-style: none;
+}
+
+.bus-tickets li {
+    display: inline-block;
+}
+
+.bus-tickets li:before {
+    content: '✔';
+    top: 0;
+    left: 0;
+    color: green;
+}
+
+.bus-tickets button {
+    background: var(--accent-color);
+    border-radius: 5px;
+    border: none;
+    color: var(--main-color-two);
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.top-airlines ol {
+    list-style-type: none;
+    counter-reset: my-counter;
+}
+
+.top-airlines li:before {
+    content: counter(my-counter);
+    counter-increment: my-counter;
+    margin-right: 5px;
+}
+
+.top-airlines a {
+    text-decoration: none;
+    color: #3cadfb;
+}
+
+.frequently-asked-questions a {
+    text-decoration: none;
+    padding-left: 10px;
+    color: #3cadfb;
+}
+
+.rating-airlines:before {
+    content: url('https://img.icons8.com/?size=24&id=19418&format=png&color=FA5252');
+}
+
+.airline-ticket-hot-sales {
+    width: 50%;
+    background: var(--main-color-two);
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.container-footer {
+    display: flex;
+    gap: 30px;
+    justify-content: space-between;
+    padding: 20px;
 }
