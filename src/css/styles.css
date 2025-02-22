@@ -10,9 +10,10 @@
     --accent-color: #FF4D4D;
 }
 
-html, body {
+body {
     font-family: 'FontInter', sans-serif;
     background: #EFF1F4;
+    margin: 0;
 }
 
 .container-header {
@@ -22,7 +23,7 @@ html, body {
 
 .nav-menu ul {
     display: flex;
-    gap: 30px;
+    gap: 5px;
     justify-content: end;
     font-size: 12px;
     color: var(--main-color-two);
@@ -36,10 +37,9 @@ html, body {
     text-decoration: none;
 }
 
-.language:before {
-    content: '🌐';
-    font-size: 22px;
-    padding-right: 5px;
+.language:after, .flights:after, .help:after {
+    content: url("/src/icons/bullet.svg");
+    margin-left: 5px;
 }
 
 .nav-menu-sections button {
@@ -67,6 +67,7 @@ html, body {
 
 .container-search input {
     height: 50px;
+    border: none;
 }
 
 .container-search button {
@@ -97,27 +98,59 @@ html, body {
     margin-right: 8px;
 }
 
-.container-main {
+.container-one {
     display: grid;
     gap: 10px;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto;
     grid-template-areas:
-    "line-1-1 line-1-2"
+    "line-1-1 line-1-2";
+    margin-top: 10px;
+}
+
+.container-two {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: 0.65fr 0.35fr;
+    grid-template-rows: auto;
+    grid-template-areas:
     "line-2-1 line-2-2"
     "line-3-1 line-3-2"
-    "line-3-1 line-4-2";
+    "line-3-1 line-4-2"
+    "line-3-1 .";
+    margin-bottom: 50px;
 }
 
 .bus-tickets, .popular-destinations article, .top-airlines article, .frequently-asked-questions article, .manage-your-tickets-on-Telegram, .airline-ticket-hot-sales article {
     background: var(--main-color-two);
     border-radius: 5px;
-    padding: 10px;
+
 }
 
+.popular-destinations p {
+    padding: 3px 20px 3px 20px;
+}
+
+.airline-ticket-hot-sales p {
+    padding-left: 20px;
+    padding-right: 40px;
+}
+
+.popular-destinations p:first-child, .airline-ticket-hot-sales p:first-child {
+    padding-top: 20px;
+}
+
+.popular-destinations p:last-child, .airline-ticket-hot-sales p:last-child {
+    padding-bottom: 20px;
+}
+
+.popular-destinations hr {
+    opacity: 0.3;
+}
 
 .manage-your-tickets-on-Telegram {
     grid-area: line-1-1;
+    padding: 20px;
 }
 
 .manage-your-tickets-on-Telegram ul {
@@ -145,12 +178,9 @@ html, body {
     cursor: pointer;
 }
 
-.popular-destinations {
-    grid-area: line-2-1;
-}
-
 .bus-tickets {
     grid-area: line-1-2;
+    padding: 20px;
 }
 
 .bus-tickets ul {
@@ -167,6 +197,10 @@ html, body {
     top: 0;
     left: 0;
     color: green;
+}
+
+.popular-destinations {
+    grid-area: line-2-1;
 }
 
 .bus-tickets button {
@@ -191,6 +225,7 @@ html, body {
 .top-airlines li {
     width: 100%;
     margin: 10px 0;
+    padding-left: 10px;
 }
 
 .top-airlines li:before {
@@ -204,14 +239,28 @@ html, body {
     color: #3cadfb;
 }
 
+.top-airlines article {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
 .frequently-asked-questions {
     grid-area: line-3-2;
 }
 
 .frequently-asked-questions a {
     text-decoration: none;
-    padding-left: 10px;
+    padding-left: 20px;
     color: #3cadfb;
+}
+
+.frequently-asked-questions p{
+    padding: 5px 0;
+}
+
+.frequently-asked-questions article {
+    padding-top: 5px;
+    padding-bottom: 5px;
 }
 
 .rating-airlines:before {
@@ -226,13 +275,14 @@ html, body {
     grid-area: line-4-2;
     background: #bebff6;
     border-radius: 5px;
-    padding: 10px;
+    padding: 20px 20px 0 20px;
+    height: 160px;
 }
 
 .best-offers input {
-    color: var(--accent-color);
     padding: 10px;
     border-radius: 5px;
+    border: 1px solid var(--accent-color);
 }
 
 .best-offers button {
@@ -240,13 +290,12 @@ html, body {
     border: none;
     border-radius: 5px;
     color: var(--main-color-two);
-    padding: 10px;
+    padding: 10px 15px;
 }
 
 .container-footer-icons {
     display: flex;
     justify-content: space-between;
-    padding: 0 10px;
 }
 
 .container-footer {
@@ -265,23 +314,28 @@ html, body {
     margin-left: 3px;
 }
 
-.affiliate-program-bth {
+.affiliate-program {
     background: var(--main-color-two);
     border: 1px solid #3cadfb;
     color: #3cadfb;
-    padding: 10px 20px;
+    font-size: 12px;
+    padding: 7px 15px;
+    position: absolute;
     cursor: pointer;
 }
 
-.google-play-bth, .app-store-bth {
-    background: #000F;
-    color: var(--main-color-two);
-    border: none;
-    padding: 10px 20px;
+.google-play, .app-store {
+    display: inline-block;
     cursor: pointer;
+    position: absolute;
+    left: 400px;
 }
 
-.facebook-bth, .instagram-bth, .telegram-bth {
+.app-store {
+    left: 510px;
+}
+
+.facebook, .instagram .telegram {
     border: none;
     color: var(--main-color-two);
     background: var(--main-color-two);
