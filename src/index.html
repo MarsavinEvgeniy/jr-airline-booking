@@ -7,80 +7,73 @@
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-<header class="page-header">
-    <div class="container-header">
-        <div style="width: 70%; margin-left: auto; margin-right: auto">
-            <nav class="nav-menu">
-                <ul>
-                    <li class="corp-clients" style="margin-right: 30px; padding-top: 5px"><a href="#">Корпоративным
-                        клиентам</a></li>
-                    <li class="flights" style="margin-right: 30px; padding-top: 5px"><a href="#">Авиабилеты</a></li>
-                    <li class="help" style="margin-right: 30px; padding-top: 5px"><a href="#">Справка</a></li>
-                    <img src="icons/lang.svg" width="20px" height="auto">
-                    <li class="language" style="padding-top: 5px"><a href="#">Русский</a></li>
-                </ul>
-            </nav>
+<header class="container-header">
+    <nav class="nav-menu">
+        <ul>
+            <li class="corp-clients" style="margin-right: 30px; padding-top: 5px"><a href="#">Корпоративным
+                клиентам</a></li>
+            <li class="flights" style="margin-right: 30px; padding-top: 5px"><a href="#">Авиабилеты</a></li>
+            <li class="help" style="margin-right: 30px; padding-top: 5px"><a href="#">Справка</a></li>
+            <li class="language" style="padding-top: 5px"><a href="#">Русский</a></li>
+        </ul>
+    </nav>
 
-            <main>
-                <h1 style="color: #febdad">Лучшие авиабилеты по самым низким ценам</h1>
-                <nav class="nav-menu-sections">
-                    <button class="flights-bth">Авиабилеты</button>
-                    <button class="train-tickets-bth">Ж/д билеты</button>
-                    <button class="buses-bth">Автобусы</button>
-                    <button class="hotels-bth">Отели <span
-                            style="height: 12px;border-radius: 20px; background-color: #07b407; color: var(--main-color-two); padding: 2px 5px; margin-left: 5px">-60%</span>
-                    </button>
-                    <button class="insurance-bth">Страхование</button>
-                </nav>
-                <form class="container-search">
-                    <div>
-                        <input style="border-bottom-left-radius: 5px; border-top-left-radius: 5px" type="text"
-                               name="from-where"
-                               placeholder="Откуда">
-                    </div>
-                    <div>
-                        <input type="text" name="where" placeholder="Куда">
-                    </div>
-                    <div>
-                        <input type="text" name="there" placeholder="Туда | Обратно">
-                    </div>
-                    <div>
-                        <input style="border-top-right-radius: 5px; border-bottom-right-radius: 5px" type="text"
-                               name="passengers"
-                               placeholder="Пассажиры, класс">
-                    </div>
-                    <button>Найти</button>
-                </form>
-                <p><a class="difficult-route" href="#">Сложный маршрут</a></p>
-            </main>
-        </div>
-    </div>
+    <section class="menu-sections">
+        <h1 style="color: #febdad">Лучшие авиабилеты по самым низким ценам</h1>
+        <nav class="nav-menu-sections">
+            <a href="#">Авиабилеты</a>
+            <a href="#">Ж/д билеты</a>
+            <a href="#">Автобусы</a>
+            <a href="#" class="discount-hotel">Отели <span>скидка 60% на отели</span></a>
+            <a href="#">Страхование</a>
+        </nav>
+        <form class="container-search">
+            <div>
+                <input style="border-bottom-left-radius: 5px; border-top-left-radius: 5px" type="text"
+                       name="from-where"
+                       placeholder="Откуда">
+            </div>
+            <div>
+                <input type="text" name="where" placeholder="Куда">
+            </div>
+            <div>
+                <input type="text" name="there" placeholder="Туда | Обратно">
+            </div>
+            <div>
+                <input style="border-top-right-radius: 5px; border-bottom-right-radius: 5px" type="text"
+                       name="passengers"
+                       placeholder="Пассажиры, класс">
+            </div>
+            <button>Найти</button>
+        </form>
+        <p><a class="complex-route">Сложный маршрут</a></p>
+    </section>
 </header>
 <div style="width: 70%; margin-left: auto; margin-right: auto">
     <section class="container-one">
         <article class="manage-your-tickets-on-Telegram">
-            <p><b>Управляйте вашими билетами в Telegram</b></p>
+            <h3>Управляйте вашими билетами в Telegram</h3>
             <ul>
                 <li>Доступ к билетам и кабинету</li>
                 <li>Агентская поддержка</li>
                 <li>FAQ</li>
             </ul>
-            <button><b>Посмотреть возможности</b></button>
+            <button>Посмотреть возможности</button>
         </article>
         <br/>
         <article class="bus-tickets">
-            <p><b>Билеты на автобус по Китаю и Европе</b></p>
+            <h3>Билеты на автобус по Китаю и Европе</h3>
             <ul>
                 <li>Удобное сравнение цен</li>
                 <li>Актуальное расписание</li>
             </ul>
-            <button><b>Найти билеты</b></button>
+            <button>Найти билеты</button>
         </article>
     </section>
     <section class="container-two">
-        <div class="popular-destinations">
+        <article class="popular-destinations">
             <h3>Популярные направления</h3>
-            <article>
+            <div>
                 <p>Варшава &#8594; Милан от 771 &#8372 Варшава &#8594; Амстердам от 3256 &#8372</p>
                 <hr/>
                 <p>Варшава &#8594; Лондон от 1001 &#8372 Варшава &#8594; Лиссабон от 3364 &#8372</p>
@@ -90,11 +83,12 @@
                 <p>Варшава &#8594; Мадрид от 1646 &#8372 Варшава &#8594; Нью-Йорк от 21277 &#8372</p>
                 <hr/>
                 <p>Варшава &#8594; Барселона от 1663 &#8372 Варшава &#8594; Амстердам от 25573 &#8372</p>
-            </article>
-        </div>
-        <div class="top-airlines">
-            <h3>ТОП-10 авиакомпаний <a href="#" style="text-decoration: none; font-size: 12px">подробнее</a></h3>
-            <article>
+            </div>
+        </article>
+        <article class="top-airlines">
+            <h3 class="title-case"><span>топ-10</span> авиакомпаний</h3>
+            <a href="#" class="top-airlines-details">подробнее</a>
+            <div>
                 <ol>
                     <li><a href="#">Эмирейтс</a>
                         <!--                    <p class="rating-airlines">4.7</p>-->
@@ -127,82 +121,60 @@
                         <!--                    <p class="rating-airlines"></p>4.5-->
                     </li>
                 </ol>
-            </article>
-        </div>
-        <div class="frequently-asked-questions">
+            </div>
+        </article>
+        <article class="frequently-asked-questions">
             <h3>Частые вопросы</h3>
-            <article>
+            <div>
                 <p><a href="#">Как забронировать авиабилеты</a></p>
                 <p><a href="#">Как оплатить авиабилет</a></p>
                 <p><a href="#">Как зарегистрироваться на рейс</a></p>
                 <p><a href="#">Как вернуть авиабилет</a></p>
                 <p><a href="#">Бонусная программа</a></p>
                 <p><a href="#">Все темы</a></p>
-            </article>
-        </div>
-        <div class="airline-ticket-hot-sales">
+            </div>
+        </article>
+        <article class="airline-ticket-hot-sales">
             <h3>Горящие распродажи авиарейсов</h3>
-            <article>
-                <p><b>Как найти авиабилеты со скидкой онлайн</b></p>
-                <p>На нашем сайте вы можете купить билеты на самолет или оформить раннее бронирование. Акции, скидки и
-                    специальные предложения, которые постоянно предлагают ведущие авизкомпании-лоукостеры, позволяют
-                    приобрести недорогие авиабилеты не выходя из дома. Если хотите сэкономить и купить авиабилеты
-                    дешевле,
-                    обратите внимание на рейсы с пересадками. А вот время - как драгоценную валюту для путешественника -
-                    помогают сэкономить прямые перелеты, пусть они и стоят дороже билетов с пересадками.</p>
-                <br/>
-                <p><b>Клиентская поддержка</b></p>
-                <p>Какой билет заказать для ребенка? Где внести данные о визе? Можно ли поменять даты вылета? Как
-                    оформить,
-                    дополнительный багаж? Операторы нашей службы поддержки знают ответы на все вопросы о перелетах. Мы
-                    сопровождаем ваши бронирования в режиме 24/7/65, на украинском, русском и английском языках. Всегда
-                    поможем подобрать, оплатить или внести изменения в билет быстро и удобно! С помощью удобного поиска
-                    сделать заказ авиабилетов по интернету можно дешево и безопасно.</p>
-                <br/>
-                <p><b>Бонусная программа для постоянных клиентов</b></p>
-                <p>За покупку авиабилетов на нашем сайте вы получите бонусы - 1% от суммы транзакции. Накопив
-                    достаточное
-                    количество баллов, можно оплатить ими билеты на самолет при следующих покупках. Максимальная скидка,
-                    которую можно получить благодаря бонусной программе, - 25%.</p>
-                <br/>
-                <p><b>Самые дешевые авиабилеты</b></p>
-                <p>Как и где купить авиабилеты дешево? Сотрудничество с 750 авиакомпаниями позволяет нам формировать
-                    гибкие тарифы и предлагать нашим клиентам лучшие условия. Наш сайт-агрегатор авиарейсов оперативно
-                    обрабатывает ваши запросы и выдает все доступные варианты. Вы можете воспользоваться фильтрами и
-                    отсортировать предложения по перевозчикам, времени вылета и другим параметрам.</p>
-                <br/>
-                <p><b>Сравнение цен на авиабилеты</b></p>
-                <p>У нас всегда можно забронировать очень дешевые авиабилеты по Украине, Европе и в другие части мира.
-                    Наша
-                    система динамики цен определит лучшее время для покупки, а также подскажет высокий и низкий сезон
-                    для
-                    путешествий по тем или иным маршрутам.</p>
-            </article>
-        </div>
-        <div class="best-offers">
-            <article>
+            <div>
+                <h4>Как найти авиабилеты со скидкой онлайн</h4>
+                <p class="text-hot-sales">На нашем сайте вы можете купить билеты на самолет или оформить раннее бронирование. Акции, скидки и специальные предложения, которые постоянно предлагают ведущие авизкомпании-лоукостеры, позволяют приобрести недорогие авиабилеты не выходя из дома. Если хотите сэкономить и купить авиабилеты дешевле, обратите внимание на рейсы с пересадками. А вот время - как драгоценную валюту для путешественника - помогают сэкономить прямые перелеты, пусть они и стоят дороже билетов с пересадками.</p>
+                <h4>Клиентская поддержка</h4>
+                <p class="text-hot-sales">Какой билет заказать для ребенка? Где внести данные о визе? Можно ли поменять даты вылета? Как оформить, дополнительный багаж? Операторы нашей службы поддержки знают ответы на все вопросы о перелетах. Мы сопровождаем ваши бронирования в режиме 24/7/65, на украинском, русском и английском языках. Всегда поможем подобрать, оплатить или внести изменения в билет быстро и удобно! С помощью удобного поиска сделать заказ авиабилетов по интернету можно дешево и безопасно.</p>
+                <h4>Бонусная программа для постоянных клиентов</h4>
+                <p class="text-hot-sales">За покупку авиабилетов на нашем сайте вы получите бонусы - 1% от суммы транзакции. Накопив достаточное количество баллов, можно оплатить ими билеты на самолет при следующих покупках. Максимальная скидка, которую можно получить благодаря бонусной программе, - 25%.</p>
+                <h4>Самые дешевые авиабилеты</h4>
+                <p class="text-hot-sales">Как и где купить авиабилеты дешево? Сотрудничество с 750 авиакомпаниями позволяет нам формировать гибкие тарифы и предлагать нашим клиентам лучшие условия. Наш сайт-агрегатор авиарейсов оперативно обрабатывает ваши запросы и выдает все доступные варианты. Вы можете воспользоваться фильтрами и отсортировать предложения по перевозчикам, времени вылета и другим параметрам.</p>
+                <h4>Сравнение цен на авиабилеты</h4>
+                <p class="text-hot-sales">У нас всегда можно забронировать очень дешевые авиабилеты по Украине, Европе и в другие части мира. Наша система динамики цен определит лучшее время для покупки, а также подскажет высокий и низкий сезон для путешествий по тем или иным маршрутам.</p>
+            </div>
+        </article>
+        <article class="best-offers">
+            <div>
                 <div style="display: inline-flex; margin-bottom: 20px">
                     <p>Лучшие предложения для путешествий</p>
                     <img src="icons/subscribe-laptop.svg" style="width: 70px;height: auto" alt="icon subscribe laptop">
                 </div>
                 <form>
-                    <input type="email" name="email" placeholder="email*" required>
-                    <button>&gt;</button>
+                    <label>
+                        <input type="email" name="email" placeholder="email*" required>
+                    </label>
+                    <button><span>Подписаться</span></button>
                 </form>
-            </article>
-        </div>
+            </div>
+        </article>
     </section>
 </div>
-<footer style="background: var(--main-color-two);">
+<footer class="container-footer">
     <div style="width: 70%; margin-left: auto; margin-right: auto">
-        <div class="container-footer-icons">
+        <section class="container-footer-icons">
             <img src="icons/iata-accredited-agent.svg" style="width: 200px; height: 120px;"
                  alt="icon iata accredited agent">
             <img src="icons/pci-logo.svg" style="width: 130px; height: 120px;" alt="icon pci logo">
             <img src="icons/visa.svg" style="width: 70px; height: 120px;" alt="icon visa">
             <img src="icons/mastercard.svg" style="width: 50px; height: 120px;" alt="icon mastercard">
-        </div>
-        <div class="container-footer">
+        </section>
+        <section class="container-footer-text">
             <div class="countries">
                 <p><b>Страны</b></p>
                 <p>Испания</p>
@@ -262,7 +234,7 @@
                 <br/><br/><br/><br/>
                 <a href="#">Карта сайта</a>
             </div>
-        </div>
+        </section>
         <hr>
         <div style="display:flex; margin: 25px 10px; padding-bottom: 20px">
             <div style="text-align:start; width: 60%">
@@ -270,18 +242,18 @@
                     программа</a>
                 <a class="google-play" href="#"><img src="icons/google-play-store.svg"
                                                      style="width: 100px;height: auto;"
-                                                     alt="icon apple app store"></a>
+                                                     alt="link icon apple app store"></a>
                 <a class="app-store" href="#"><img src="icons/apple-app-store.svg"
                                                    style="width: 100px;height: auto;"
-                                                   alt="icon apple app store"></a>
+                                                   alt="link icon apple app store"></a>
             </div>
             <div style="text-align: end ;width: 40%">
                 <a class="facebook" href="#"><img src="icons/facebook.svg" style=" width: 30px;height: 30px;"
-                                                  alt="icon facebook"></a>
+                                                  alt="link icon facebook"></a>
                 <a class="instagram" href="#"><img src="icons/instagram.svg" style=" width: 30px;height: 30px;"
-                                                   alt="icon instagram"></a>
+                                                   alt="link icon instagram"></a>
                 <a class="telegram" href="#"><img src="icons/telegram.svg" style=" width: 30px;height: 30px;"
-                                                  alt="icon telegram"></a>
+                                                  alt="link icon telegram"></a>
             </div>
         </div>
     </div>
