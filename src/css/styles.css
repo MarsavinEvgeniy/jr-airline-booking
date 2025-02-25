@@ -16,6 +16,12 @@ body {
     margin: 0;
 }
 
+@media (min-width: 320px) and (max-width: 768px) {
+    .nav-menu div:first-child {
+        display: none;
+    }
+}
+
 .container-header {
     display: inline-block;
     background: #7413dc;
@@ -78,9 +84,11 @@ body {
     color: var(--main-color-two);
     cursor: pointer;
 }
+
 .discount-hotel {
     height: 15px;
 }
+
 .discount-hotel span {
     font-size: 0;
 }
@@ -100,12 +108,45 @@ body {
     color: #000F;
 }
 
+.container-search {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: 50px;
+}
 
+.city-from, .city-to {
+    display: flex;
+    flex-direction: row;
+}
+
+.date-fromDate, .date-toDate {
+    display: flex;
+    flex-direction: row;
+    border: none;
+}
+
+.passengers-and-class-block {
+    display: flex;
+    flex-direction: row;
+}
+
+.container-search-btn {
+    display: flex;
+    flex-direction: row;
+    background-color: var(--accent-color);
+    color: var(--main-color-two);
+    border-radius: 5px;
+    padding: 5px 25px;
+    margin-left: 5px;
+    border: none;
+}
 
 .complex-route {
-    color: #d5d8dc;
+    color: var(--main-color-two);
     opacity: 0.9;
     font-size: 12px;
+    font-weight: bold;
     cursor: pointer;
     padding-top: 10px;
 }
