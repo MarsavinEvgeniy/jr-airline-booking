@@ -8,15 +8,19 @@
 </head>
 <body>
 <header class="container-header">
-    <nav class="nav-menu">
-        <ul>
-            <li class="corp-clients" style="margin-right: 30px; padding-top: 5px"><a href="#">Корпоративным
-                клиентам</a></li>
-            <li class="flights" style="margin-right: 30px; padding-top: 5px"><a href="#">Авиабилеты</a></li>
-            <li class="help" style="margin-right: 30px; padding-top: 5px"><a href="#">Справка</a></li>
-            <li class="language" style="padding-top: 5px"><a href="#">Русский</a></li>
-        </ul>
-    </nav>
+    <div class="container-nav-menu">
+        <nav class="nav-menu">
+            <div>
+                <a class="corp-clients" href="#">Корпоративным клиентам</a>
+                <a class="flights" href="#">Авиабилеты</a>
+                <a class="help" href="#">Справка</a>
+            </div>
+            <p class="lang"></p>
+            <div>
+                <a class="language" href="#">Русский</a>
+            </div>
+        </nav>
+    </div>
 
     <section class="menu-sections">
         <h1 style="color: #febdad">Лучшие авиабилеты по самым низким ценам</h1>
@@ -28,29 +32,12 @@
             <a href="#">Страхование</a>
         </nav>
         <form class="container-search">
-            <div>
-                <input style="border-bottom-left-radius: 5px; border-top-left-radius: 5px" type="text"
-                       name="from-where"
-                       placeholder="Откуда">
-            </div>
-            <div>
-                <input type="text" name="where" placeholder="Куда">
-            </div>
-            <div>
-                <input type="text" name="there" placeholder="Туда | Обратно">
-            </div>
-            <div>
-                <input style="border-top-right-radius: 5px; border-bottom-right-radius: 5px" type="text"
-                       name="passengers"
-                       placeholder="Пассажиры, класс">
-            </div>
-            <button>Найти</button>
         </form>
-        <p><a class="complex-route">Сложный маршрут</a></p>
+        <div class="complex-route">Сложный маршрут</div>
     </section>
 </header>
 <div style="width: 70%; margin-left: auto; margin-right: auto">
-    <section class="container-one">
+    <section class="container-proposals">
         <article class="manage-your-tickets-on-Telegram">
             <h3>Управляйте вашими билетами в Telegram</h3>
             <ul>
@@ -70,57 +57,134 @@
             <button>Найти билеты</button>
         </article>
     </section>
-    <section class="container-two">
+    <section class="container-information">
         <article class="popular-destinations">
             <h3>Популярные направления</h3>
-            <div>
-                <p>Варшава &#8594; Милан от 771 &#8372 Варшава &#8594; Амстердам от 3256 &#8372</p>
-                <hr/>
-                <p>Варшава &#8594; Лондон от 1001 &#8372 Варшава &#8594; Лиссабон от 3364 &#8372</p>
-                <hr/>
-                <p>Варшава &#8594; Аликанте от 1424 &#8372 Варшава &#8594; Париж от 4077 &#8372</p>
-                <hr/>
-                <p>Варшава &#8594; Мадрид от 1646 &#8372 Варшава &#8594; Нью-Йорк от 21277 &#8372</p>
-                <hr/>
-                <p>Варшава &#8594; Барселона от 1663 &#8372 Варшава &#8594; Амстердам от 25573 &#8372</p>
+            <div class="popular-destinations-block">
+                <div class="popular-destinations-container">
+                    <div class="popular-destinations-element-block">
+                        <p>Варшава &#8594; Милан</p>
+                        <div class="price-popular-destinations">
+                            <p>от 771 &#8372</p>
+                        </div>
+                    </div>
+                    <div class="popular-destinations-element-block">
+                        <p>Варшава &#8594; Амстердам</p>
+                        <div class="price-popular-destinations">
+                            <p>от 3256 &#8372</p>
+                        </div>
+                    </div>
+                    <div class="solid-line"></div>
+                    <div class="popular-destinations-element-block">
+                        <p>Варшава &#8594; Лондон</p>
+                        <div class="price-popular-destinations">
+                            <p>от 1001 &#8372</p>
+                        </div>
+                    </div>
+                    <div class="popular-destinations-element-block">
+                        <p>Варшава &#8594; Лиссабон</p>
+                        <div class="price-popular-destinations">
+                            <p>от 3364 &#8372</p>
+                        </div>
+                    </div>
+                    <div class="solid-line"></div>
+                    <div class="popular-destinations-element-block">
+                        <p>Варшава &#8594; Аликанте</p>
+                        <div class="price-popular-destinations">
+                            <p>от 1424 &#8372</p>
+                        </div>
+                    </div>
+                    <div class="popular-destinations-element-block">
+                        <p>Варшава &#8594; Париж</p>
+                        <div class="price-popular-destinations">
+                            <p>от 4077 &#8372</p>
+                        </div>
+                    </div>
+                    <div class="solid-line"></div>
+                    <div class="popular-destinations-element-block">
+                        <p>Варшава &#8594; Мадрид</p>
+                        <div class="price-popular-destinations">
+                            <p>от 1646 &#8372</p>
+                        </div>
+                    </div>
+                    <div class="popular-destinations-element-block">
+                        <p>Варшава &#8594; Нью-Йорк</p>
+                        <div class="price-popular-destinations">
+                            <p>от 21277 &#8372</p>
+                        </div>
+                    </div>
+                    <div class="solid-line"></div>
+                    <div class="popular-destinations-element-block">
+                        <p>Варшава &#8594; Барселона</p>
+                        <div class="price-popular-destinations">
+                            <p>от 1663 &#8372</p>
+                        </div>
+                    </div>
+                    <div class="popular-destinations-element-block">
+                        <p>Варшава &#8594; Днепасар-Бали</p>
+                        <div class="price-popular-destinations">
+                            <p>от 25573 &#8372</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </article>
         <article class="top-airlines">
             <h3 class="title-case"><span>топ-10</span> авиакомпаний</h3>
             <a href="#" class="top-airlines-details">подробнее</a>
-            <div>
-                <ol>
-                    <li><a href="#">Эмирейтс</a>
-                        <!--                    <p class="rating-airlines">4.7</p>-->
-                    </li>
-                    <li><a href="#">Катар Эйрвэйз</a>
-                        <!--                    <p class="rating-airlines"></p>4.7-->
-                    </li>
-                    <li><a href="#">Тюркиш Эрлайнз</a>
-                        <!--                    <p class="rating-airlines"></p>4.7-->
-                    </li>
-                    <li><a href="#">Сингапур Эрлайнз</a>
-                        <!--                    <p class="rating-airlines"></p>4.7-->
-                    </li>
-                    <li><a href="#">Кореан Эйр</a>
-                        <!--                    <p class="rating-airlines"></p>4.7-->
-                    </li>
-                    <li><a href="#">Этихад Эйрвэйз</a>
-                        <!--                    <p class="rating-airlines"></p>4.6-->
-                    </li>
-                    <li><a href="#">Катай Пасифик</a>
-                        <!--                    <p class="rating-airlines"></p>4.5-->
-                    </li>
-                    <li><a href="#">Эйр Астана</a>
-                        <!--                    <p class="rating-airlines"></p>4.5-->
-                    </li>
-                    <li><a href="#">Верджин Атлантик Эйрвэйз</a>
-                        <!--                    <p class="rating-airlines"></p>4.5-->
-                    </li>
-                    <li><a href="#">Эйр Нью Зиланд</a>
-                        <!--                    <p class="rating-airlines"></p>4.5-->
-                    </li>
-                </ol>
+            <div class="top-airlines-block">
+                <div>
+                    <div class="top-airlines-element-block">
+                        <p>1</p>
+                        <p><a href="#">Эмирейтс</a></p>
+                        <p class="rating-airlines">4.7</p>
+                    </div>
+                    <div class="top-airlines-element-block">
+                        <p>2</p>
+                        <p><a href="#">Катар Эйрвэйз</a></p>
+                        <p class="rating-airlines">4.7</p>
+                    </div>
+                    <div class="top-airlines-element-block">
+                        <p>3</p>
+                        <p><a href="#">Тюркиш Эрлайнз</a></p>
+                        <p class="rating-airlines">4.7</p>
+                    </div>
+                    <div class="top-airlines-element-block">
+                        <p>4</p>
+                        <p><a href="#">Сингапур Эрлайнз</a></p>
+                        <p class="rating-airlines">4.7</p>
+                    </div>
+                    <div class="top-airlines-element-block">
+                        <p>5</p>
+                        <p><a href="#">Кореан Эйр</a></p>
+                        <p class="rating-airlines">4.7</p>
+                    </div>
+                    <div class="top-airlines-element-block">
+                        <p>6</p>
+                        <p><a href="#">Этихад Эйрвэйз</a></p>
+                        <p class="rating-airlines">4.6</p>
+                    </div>
+                    <div class="top-airlines-element-block">
+                        <p>7</p>
+                        <p><a href="#">Катай Пасифик</a></p>
+                        <p class="rating-airlines">4.5</p>
+                    </div>
+                    <div class="top-airlines-element-block">
+                        <p>8</p>
+                        <p><a href="#">Эйр Астана</a></p>
+                        <p class="rating-airlines">4.5</p>
+                    </div>
+                    <div class="top-airlines-element-block">
+                        <p>9</p>
+                        <p><a href="#">Верджин Атлантик Эйрвэйз</a></p>
+                        <p class="rating-airlines">4.5</p>
+                    </div>
+                    <div class="top-airlines-element-block">
+                        <p>10</p>
+                        <p><a href="#">Эйр Нью Зиланд</a></p>
+                        <p class="rating-airlines">4.5</p>
+                    </div>
+                </div>
             </div>
         </article>
         <article class="frequently-asked-questions">
@@ -138,15 +202,34 @@
             <h3>Горящие распродажи авиарейсов</h3>
             <div>
                 <h4>Как найти авиабилеты со скидкой онлайн</h4>
-                <p class="text-hot-sales">На нашем сайте вы можете купить билеты на самолет или оформить раннее бронирование. Акции, скидки и специальные предложения, которые постоянно предлагают ведущие авизкомпании-лоукостеры, позволяют приобрести недорогие авиабилеты не выходя из дома. Если хотите сэкономить и купить авиабилеты дешевле, обратите внимание на рейсы с пересадками. А вот время - как драгоценную валюту для путешественника - помогают сэкономить прямые перелеты, пусть они и стоят дороже билетов с пересадками.</p>
+                <p class="text-hot-sales">На нашем сайте вы можете купить билеты на самолет или оформить раннее
+                    бронирование. Акции, скидки и специальные предложения, которые постоянно предлагают ведущие
+                    авизкомпании-лоукостеры, позволяют приобрести недорогие авиабилеты не выходя из дома. Если хотите
+                    сэкономить и купить авиабилеты дешевле, обратите внимание на рейсы с пересадками. А вот время - как
+                    драгоценную валюту для путешественника - помогают сэкономить прямые перелеты, пусть они и стоят
+                    дороже билетов с пересадками.</p>
                 <h4>Клиентская поддержка</h4>
-                <p class="text-hot-sales">Какой билет заказать для ребенка? Где внести данные о визе? Можно ли поменять даты вылета? Как оформить, дополнительный багаж? Операторы нашей службы поддержки знают ответы на все вопросы о перелетах. Мы сопровождаем ваши бронирования в режиме 24/7/65, на украинском, русском и английском языках. Всегда поможем подобрать, оплатить или внести изменения в билет быстро и удобно! С помощью удобного поиска сделать заказ авиабилетов по интернету можно дешево и безопасно.</p>
+                <p class="text-hot-sales">Какой билет заказать для ребенка? Где внести данные о визе? Можно ли поменять
+                    даты вылета? Как оформить, дополнительный багаж? Операторы нашей службы поддержки знают ответы на
+                    все вопросы о перелетах. Мы сопровождаем ваши бронирования в режиме 24/7/65, на украинском, русском
+                    и английском языках. Всегда поможем подобрать, оплатить или внести изменения в билет быстро и
+                    удобно! С помощью удобного поиска сделать заказ авиабилетов по интернету можно дешево и
+                    безопасно.</p>
                 <h4>Бонусная программа для постоянных клиентов</h4>
-                <p class="text-hot-sales">За покупку авиабилетов на нашем сайте вы получите бонусы - 1% от суммы транзакции. Накопив достаточное количество баллов, можно оплатить ими билеты на самолет при следующих покупках. Максимальная скидка, которую можно получить благодаря бонусной программе, - 25%.</p>
+                <p class="text-hot-sales">За покупку авиабилетов на нашем сайте вы получите бонусы - 1% от суммы
+                    транзакции. Накопив достаточное количество баллов, можно оплатить ими билеты на самолет при
+                    следующих покупках. Максимальная скидка, которую можно получить благодаря бонусной программе, -
+                    25%.</p>
                 <h4>Самые дешевые авиабилеты</h4>
-                <p class="text-hot-sales">Как и где купить авиабилеты дешево? Сотрудничество с 750 авиакомпаниями позволяет нам формировать гибкие тарифы и предлагать нашим клиентам лучшие условия. Наш сайт-агрегатор авиарейсов оперативно обрабатывает ваши запросы и выдает все доступные варианты. Вы можете воспользоваться фильтрами и отсортировать предложения по перевозчикам, времени вылета и другим параметрам.</p>
+                <p class="text-hot-sales">Как и где купить авиабилеты дешево? Сотрудничество с 750 авиакомпаниями
+                    позволяет нам формировать гибкие тарифы и предлагать нашим клиентам лучшие условия. Наш
+                    сайт-агрегатор авиарейсов оперативно обрабатывает ваши запросы и выдает все доступные варианты. Вы
+                    можете воспользоваться фильтрами и отсортировать предложения по перевозчикам, времени вылета и
+                    другим параметрам.</p>
                 <h4>Сравнение цен на авиабилеты</h4>
-                <p class="text-hot-sales">У нас всегда можно забронировать очень дешевые авиабилеты по Украине, Европе и в другие части мира. Наша система динамики цен определит лучшее время для покупки, а также подскажет высокий и низкий сезон для путешествий по тем или иным маршрутам.</p>
+                <p class="text-hot-sales">У нас всегда можно забронировать очень дешевые авиабилеты по Украине, Европе и
+                    в другие части мира. Наша система динамики цен определит лучшее время для покупки, а также подскажет
+                    высокий и низкий сезон для путешествий по тем или иным маршрутам.</p>
             </div>
         </article>
         <article class="best-offers">
