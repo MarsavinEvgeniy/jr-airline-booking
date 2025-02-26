@@ -469,6 +469,12 @@ body {
     padding: 10px;
     border-radius: 5px;
     border: 1px solid var(--accent-color);
+    margin-right: 0;
+}
+.best-offers input::placeholder {
+    font-weight: bold;
+    opacity: 0.5;
+    color: var(--accent-color);
 }
 
 .best-offers button {
@@ -477,6 +483,7 @@ body {
     border-radius: 5px;
     color: var(--main-color-two);
     padding: 10px 15px;
+    margin-left: -5px;
 }
 
 .best-offers button span {
