@@ -120,6 +120,8 @@ body {
 
 .discount-hotel:after {
     content: "-60%";
+    position: relative;
+    bottom: 2px;
     margin-left: 5px;
     border-radius: 20px;
     height: 15px;
