@@ -10,20 +10,25 @@
 <header class="container-header">
     <div class="container-nav-menu">
         <nav class="nav-menu">
-            <div>
-                <a class="corp-clients" href="#">Корпоративным клиентам</a>
-                <a class="flights" href="#">Авиабилеты</a>
-                <a class="help" href="#">Справка</a>
-            </div>
+            <ul>
+                <li><a class="corp-clients" href="#">Корпоративным клиентам</a></li>
+                <li><a class="flights" href="#">Авиабилеты</a></li>
+                <li><a class="help" href="#">Справка</a></li>
+            </ul>
             <p class="lang"></p>
-            <div>
-                <a class="language" href="#">Русский</a>
-            </div>
+            <ul class="language">
+                <li><a href="#">Русский</a></li>
+            </ul>
         </nav>
+        <div class="burger-menu">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
     </div>
 
     <section class="menu-sections">
-        <h1 style="color: #febdad">Лучшие авиабилеты по самым низким ценам</h1>
+        <h1 style="color: #febdad; font-size: 35px">Лучшие авиабилеты по самым низким ценам</h1>
         <nav class="nav-menu-sections">
             <a href="#">Авиабилеты</a>
             <a href="#">Ж/д билеты</a>
@@ -33,33 +38,48 @@
         </nav>
         <div>
             <form class="container-search">
-                <div class="city-from">
-                    <label for="city-from"></label>
-                    <input id="city-from" type="text" name="text" value="Варшава"/>
-                </div>
-                <div class="city-to">
-                    <label for="city-to"></label>
-                    <input id="city-to" type="text" name="text" placeholder="Куда"/>
-                </div>
-                <div class="date-fromDate">
-                    <label for="date-fromDate"></label>
-                    <input id="date-fromDate" type="text" name="text" placeholder="Туда"/>
-                </div>
-                <div class="date-toDate">
-                    <label for="date-toDate"></label>
-                    <input id="date-toDate" type="text" name="text" placeholder="Обратно"/>
-                </div>
-                <div class="passengers-and-class-block">
-                    <label for="passengers-and-class"></label>
-                    <input id="passengers-and-class" type="text" name="text" value="пассажиры&#44; класс"/>
-                </div>
-                <button class="container-search-btn"><p>Найти</p></button>
+                <fieldset class="container-search-menu">
+                    <div class="city-from">
+                        <label for="city-from">
+                            <span style="font-size: 13px; opacity: 0.5">Откуда</span>
+                            <input style="position: relative" id="city-from" type="text" name="text" value="Варшава"/>
+                        </label>
+                    </div>
+                    <div class="create-line"></div>
+                    <div style="display: flex; flex-direction: row; margin-top: 10px">
+                        <div class="city-to">
+                            <label for="city-to">
+                                <input id="city-to" type="text" name="text" placeholder="Куда"/>
+                            </label>
+                        </div>
+                        <div class="create-line-center"></div>
+                        <div class="date-fromDate">
+                            <label for="date-fromDate">
+                                <input id="date-fromDate" type="text" name="text" placeholder="Туда"/>
+                            </label>
+                        </div>
+                        <div class="create-line-container-search-menu"></div>
+                        <div class="date-toDate">
+                            <label for="date-toDate">
+                                <input id="date-toDate" type="text" name="text" placeholder="Обратно"/>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="create-line"></div>
+                    <div class="passengers-and-class-block">
+                        <label for="passengers-and-class">
+                            <span style="font-size: 14px; opacity: 0.5">Пассажиры&#44; класс</span>
+                            <input id="passengers-and-class" type="text" name="text" value="1 пассажир&#44; любой"/>
+                        </label>
+                    </div>
+                </fieldset>
+                <button class="container-search-btn"><span>Найти</span></button>
             </form>
             <div class="complex-route">Сложный маршрут</div>
         </div>
     </section>
 </header>
-<div style="width: 70%; margin-left: auto; margin-right: auto">
+<main class="main-content">
     <section class="container-proposals">
         <article class="manage-your-tickets-on-Telegram">
             <h3>Управляйте вашими билетами в Telegram</h3>
@@ -270,9 +290,9 @@
             </div>
         </article>
     </section>
-</div>
+</main>
 <footer class="container-footer">
-    <div style="width: 70%; margin-left: auto; margin-right: auto">
+    <div class="composition-footer">
         <section class="container-footer-icons">
             <img src="icons/iata-accredited-agent.svg" style="width: 200px; height: 120px;"
                  alt="icon iata accredited agent">
