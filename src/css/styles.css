@@ -1,0 +1,555 @@
+@font-face {
+    font-family: 'FontInter';
+    src: url(/src/fonts/inter/Inter-Italic-VariableFont_opsz,wght.ttf) format('ttf'),
+    url(/src/fonts/inter/Inter-VariableFont_opsz,wght.ttf) format('ttf');
+}
+
+:root {
+    --main-color-one: #6E36F7;
+    --main-color-two: #FFFFFF;
+    --accent-color: #FF4D4D;
+}
+
+body {
+    font-family: 'FontInter', sans-serif;
+    background: #EFF1F4;
+    margin: 0;
+}
+
+.container-header {
+    background: #7413dc;
+    padding-bottom: 60px;
+}
+
+.burger-menu {
+    display: none;
+    flex-direction: column;
+    margin-left: 15px;
+    margin-top: 13px;
+}
+
+.bar {
+    width: 20px;
+    height: 2px;
+    background-color: white;
+    margin: 2px;
+}
+
+.container-nav-menu {
+    display: flex;
+    justify-content: flex-end;
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+}
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    color: var(--main-color-two);
+}
+
+.nav-menu ul {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+}
+
+.lang:before {
+    content: url("/src/icons/lang.svg");
+    margin-right: 5px;
+}
+
+.nav-menu a {
+    color: var(--main-color-two);
+    text-decoration: none;
+}
+
+@media (min-width: 320px) and (max-width: 768px) {
+    .nav-menu ul {
+        display: none;
+    }
+
+    .burger-menu {
+        display: flex;
+    }
+
+    header {
+        width: 100%;
+    }
+}
+
+.lang {
+    margin-left: 30px;
+}
+
+.language {
+    padding-left: 0;
+}
+
+.language li:after, .flights:after, .help:after {
+    content: url("/src/icons/bullet.svg");
+    margin-left: 5px;
+}
+
+.menu-sections {
+    margin-left: 15%;
+}
+
+.nav-menu-sections a {
+    display: inline-flex;
+    background: #8853dd;
+    border-radius: 20px;
+    text-decoration: none;
+    font-size: 12px;
+    padding: 8px 15px;
+    margin: 1px 1px 15px 1px;
+    font-weight: bold;
+    color: var(--main-color-two);
+    cursor: pointer;
+}
+
+.discount-hotel {
+    height: 15px;
+}
+
+.discount-hotel span {
+    font-size: 0;
+}
+
+.discount-hotel:after {
+    content: "-60%";
+    position: relative;
+    bottom: 2px;
+    margin-left: 5px;
+    border-radius: 20px;
+    height: 15px;
+    background-color: #07b407;
+    color: var(--main-color-two);
+    padding: 2px 5px;
+}
+
+.nav-menu-sections a:hover {
+    background: var(--main-color-two);
+    color: #000F;
+}
+
+.container-search {
+    display: flex;
+    flex-direction: row;
+    height: 60px;
+}
+
+.container-search-menu {
+    display: flex;
+    width: 50%;
+    flex-direction: row;
+    background-color: var(--main-color-two);
+    border: none;
+    border-radius: 5px;
+    padding-top: 10px;
+}
+
+
+.create-line {
+    position: relative;
+    height: 60px;
+    border-left: 2px solid #afaaaa;
+    opacity: 0.5;
+    margin-right: 10px;
+    bottom: 10px;
+}
+
+.create-line-center {
+    position: relative;
+    height: 60px;
+    border-left: 2px solid #afaaaa;
+    opacity: 0.5;
+    margin-right: 10px;
+    bottom: 20px;
+}
+
+.create-line-container-search-menu {
+    margin-right: 10px;
+    height: 20px;
+    border-left: 2px solid #afaaaa;
+    opacity: 0.5;
+}
+
+.city-from, .city-to {
+    display: flex;
+    flex-direction: row;
+}
+
+.date-fromDate, .date-toDate {
+    display: flex;
+    flex-direction: row;
+    width: 120px;
+}
+
+.city-from input, .city-to input, .date-fromDate input, .date-toDate input, .passengers-and-class-block input {
+    border: rgb(0, 0, 0, 0);
+}
+
+.passengers-and-class-block {
+    display: flex;
+    flex-direction: row;
+}
+
+.container-search-btn {
+    display: flex;
+    flex-direction: row;
+    background-color: var(--accent-color);
+    color: var(--main-color-two);
+    border-radius: 5px;
+    padding: 22px 25px;
+    margin-left: 5px;
+    border: none;
+}
+
+.complex-route {
+    color: var(--main-color-two);
+    opacity: 0.9;
+    font-size: 12px;
+    font-weight: bold;
+    cursor: pointer;
+    padding-top: 10px;
+}
+
+.complex-route:before {
+    content: url("/src/icons/route.svg");
+    margin-right: 8px;
+}
+
+.main-content {
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+}
+
+.container-proposals {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+    "line-1-1 line-1-2";
+    margin-top: 10px;
+}
+
+.container-proposals button {
+    font-weight: bold;
+}
+
+.container-information {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: 0.65fr 0.35fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+    "line-2-1 line-2-2"
+    "line-3-1 line-3-2"
+    "line-3-1 line-4-2"
+    "line-3-1 .";
+    margin-bottom: 50px;
+}
+
+.bus-tickets, .popular-destinations div, .top-airlines div, .frequently-asked-questions div, .manage-your-tickets-on-Telegram, .airline-ticket-hot-sales div {
+    background: var(--main-color-two);
+    border-radius: 5px;
+}
+
+.airline-ticket-hot-sales div {
+    padding: 0 20px;
+}
+
+.airline-ticket-hot-sales h4:first-child {
+    padding-top: 20px;
+}
+
+.text-hot-sales {
+    opacity: 0.6;
+    margin: -10px 0 10px 0;
+}
+
+.airline-ticket-hot-sales p:first-child {
+    padding-top: 20px;
+}
+
+.airline-ticket-hot-sales p:last-child {
+    padding-bottom: 20px;
+}
+
+.manage-your-tickets-on-Telegram {
+    grid-area: line-1-1;
+    padding: 20px;
+}
+
+.manage-your-tickets-on-Telegram ul {
+    list-style: none;
+    padding-inline-start: 0;
+}
+
+.manage-your-tickets-on-Telegram li {
+    display: inline-block;
+}
+
+.manage-your-tickets-on-Telegram li:before {
+    content: '✔';
+    top: 0;
+    left: 0;
+    color: green;
+}
+
+.manage-your-tickets-on-Telegram button {
+    background: #f8dcd6;
+    border-radius: 5px;
+    border: none;
+    color: var(--accent-color);
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.bus-tickets {
+    grid-area: line-1-2;
+    padding: 20px;
+}
+
+.bus-tickets ul {
+    list-style: none;
+    padding-inline-start: 0;
+}
+
+.bus-tickets li {
+    display: inline-block;
+}
+
+.bus-tickets li:before {
+    content: '✔';
+    top: 0;
+    left: 0;
+    color: green;
+}
+
+.popular-destinations {
+    grid-area: line-2-1;
+}
+
+.popular-destinations-block {
+    display: flex;
+    justify-content: space-between;
+}
+
+.solid-line {
+    border-top: 1px solid #d5d8dc;
+}
+
+.popular-destinations-element-block {
+    display: inline-flex;
+    padding-left: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 45%;
+}
+
+.popular-destinations-container {
+    width: 100%;
+    font-size: 14px;
+}
+
+.price-popular-destinations {
+    color: var(--accent-color);
+    margin-left: auto;
+}
+
+.bus-tickets button {
+    background: var(--accent-color);
+    border-radius: 5px;
+    border: none;
+    color: var(--main-color-two);
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.top-airlines div {
+    grid-area: line-2-2;
+}
+
+.top-airlines-block {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+}
+
+.top-airlines-element-block {
+    display: inline-flex;
+    width: 100%;
+}
+
+.top-airlines-element-block p {
+    display: block;
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+.top-airlines-element-block p:first-child {
+    margin-right: 10px;
+}
+
+.top-airlines-element-block p:last-child {
+    margin-left: auto;
+}
+
+.top-airlines a {
+    text-decoration: none;
+    color: #3cadfb;
+}
+
+.title-case {
+    display: inline-block;
+}
+
+.title-case span {
+    text-transform: uppercase;
+}
+
+.top-airlines-details {
+    margin-left: 50px;
+    text-decoration: none;
+    font-size: 12px;
+}
+
+.top-airlines article {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.frequently-asked-questions {
+    grid-area: line-3-2;
+}
+
+.frequently-asked-questions div {
+    padding: 5px 0;
+}
+
+.frequently-asked-questions a {
+    text-decoration: none;
+    padding-left: 20px;
+    color: #3cadfb;
+}
+
+.frequently-asked-questions p {
+    padding: 5px 0;
+}
+
+.frequently-asked-questions article {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.rating-airlines:before {
+    content: url('/src/icons/star.svg');
+    margin-right: 5px;
+}
+
+.airline-ticket-hot-sales {
+    grid-area: line-3-1;
+}
+
+.best-offers {
+    grid-area: line-4-2;
+    background: #bebff6;
+    border-radius: 5px;
+    padding: 20px 20px 0 20px;
+    height: 160px;
+}
+
+.best-offers input {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid var(--accent-color);
+    margin-right: 0;
+}
+.best-offers input::placeholder {
+    font-weight: bold;
+    opacity: 0.5;
+    color: var(--accent-color);
+}
+
+.best-offers button {
+    background: var(--accent-color);
+    border: none;
+    border-radius: 5px;
+    color: var(--main-color-two);
+    padding: 10px 15px;
+    margin-left: -5px;
+}
+
+.best-offers button span {
+    font-size: 0;
+}
+
+.best-offers button:before {
+    content: "❯";
+}
+
+.container-footer {
+    background: var(--main-color-two);
+    padding-bottom: 60px;
+}
+
+.composition-footer {
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+}
+
+.container-footer-icons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.container-footer-text {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10px;
+}
+
+.container-footer a {
+    text-decoration: none;
+    color: #3cadfb;
+}
+
+.container-footer-text a:after {
+    content: "→";
+    margin-left: 3px;
+}
+
+.affiliate-program {
+    background: var(--main-color-two);
+    border: 1px solid #3cadfb;
+    color: #3cadfb;
+    font-size: 12px;
+    padding: 7px 15px;
+    position: absolute;
+    cursor: pointer;
+}
+
+.google-play, .app-store {
+    display: inline-block;
+    cursor: pointer;
+    position: absolute;
+    left: 400px;
+}
+
+.app-store {
+    left: 510px;
+}
+
+.facebook, .instagram .telegram {
+    border: none;
+    color: var(--main-color-two);
+    background: var(--main-color-two);
+    cursor: pointer;
+}
