@@ -203,7 +203,7 @@ body {
     background-color: var(--accent-color);
     color: var(--main-color-two);
     border-radius: 5px;
-    padding: 22px 25px;
+    padding: 22px 30px;
     margin-left: 5px;
     border: none;
 }
@@ -302,10 +302,10 @@ body {
     color: green;
 }
 
-.manage-your-tickets-on-Telegram button {
+.manage-your-tickets-on-Telegram a {
     background: #f8dcd6;
     border-radius: 5px;
-    border: none;
+    text-decoration: none;
     color: var(--accent-color);
     padding: 10px 20px;
     cursor: pointer;
