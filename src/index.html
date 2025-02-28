@@ -40,29 +40,64 @@
             <form class="container-search">
                 <fieldset class="container-search-menu">
                     <div class="city-from">
-                        <label for="city-from">
-                            <span style="font-size: 13px; opacity: 0.5">Откуда</span>
-                            <input style="position: relative" id="city-from" type="text" name="text" value="Варшава"/>
-                        </label>
+                        <div>
+                            <div style="font-size: 10px; opacity: 0.5; margin-left: 3px">Откуда</div>
+                            <label for="city-from-input">
+                                <input style="position: relative" id="city-from-input" type="text" name="city-from"
+                                       value="Варшава"/>
+                            </label>
+                            <div class="city-from-dropdown-list">
+                                <div style="font-weight: bold; font-size: 12px">Выбранный город</div>
+                                <div class="selected-city-container">
+                                    <div class="selected-city">Варшава</div>
+                                    <div class="selected-city-code">Waw</div>
+                                </div>
+                                <div style="font-weight: bold; font-size: 12px">Ближайшие аэрапорты</div>
+                                <div class="city-from-dropdown-content">
+                                    <div>
+                                        <div class="city-dropdown-name">Кишенев</div>
+                                        <div class="city-dropdown-name">Балице</div>
+                                    </div>
+                                    <div class="city-to-dropdown-content-code">
+                                        <div class="city-dropdown-code">Rmo</div>
+                                        <div class="city-dropdown-code">Krk</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     <div class="create-line"></div>
                     <div style="display: flex; flex-direction: row; margin-top: 10px">
                         <div class="city-to">
-                            <label for="city-to">
-                                <input id="city-to" type="text" name="text" placeholder="Куда"/>
+                            <label for="city-to-input">
+                                <input id="city-to-input" type="text" name="city-to-input" value="Куда"/>
                             </label>
+                            <div class="city-to-dropdown-list">
+                                <div style="font-weight: bold; font-size: 12px; opacity: 0.6">Ближайшие аэрапорты</div>
+                                <div class="city-to-dropdown-content">
+                                    <div>
+                                        <div class="city-dropdown-name">Париж</div>
+                                        <div class="city-dropdown-name">Нью-Йорк</div>
+                                        <div class="city-dropdown-name">Лондон</div>
+                                    </div>
+                                    <div class="city-to-dropdown-content-code">
+                                        <div class="city-dropdown-code">Par</div>
+                                        <div class="city-dropdown-code">Nyc</div>
+                                        <div class="city-dropdown-code">Lon</div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                         <div class="create-line-center"></div>
-                        <div class="date-fromDate">
-                            <label for="date-fromDate">
-                                <input id="date-fromDate" type="text" name="text" placeholder="Туда"/>
-                            </label>
-                        </div>
-                        <div class="create-line-container-search-menu"></div>
-                        <div class="date-toDate">
-                            <label for="date-toDate">
-                                <input id="date-toDate" type="text" name="text" placeholder="Обратно"/>
-                            </label>
+                        <div class="date-flight">
+                            <div class="date-fromDate">
+                                <div class="date-there">Туда</div>
+                            </div>
+                            <div class="create-line-container-search-menu"></div>
+                            <div class="date-toDate">
+                                <div class="date-back">Обратно</div>
+                                <span class="icon-calendar"></span>
+                            </div>
                         </div>
                     </div>
                     <div class="create-line"></div>
@@ -75,6 +110,126 @@
                 </fieldset>
                 <button class="container-search-btn"><span>Найти</span></button>
             </form>
+            <dialog class="calendar-container" open>
+                <div class="calendar">
+                    <div class="calendar-header">
+                        <div class="calendar-label">Выберите дату туда</div>
+                        <div class="calendar-date-controls">
+                            <button class="calendar-date-control">В одну сторону</button>
+                        </div>
+                    </div>
+                    <div class="calendar-controls">
+                        <button class="calendar-month-control calendar-month-control-rev">Назад</button>
+                        <button class="calendar-month-control calendar-month-control-fwd">Вперед</button>
+                    </div>
+                    <div class="calendar-dates">
+                        <div class="calendar-month">
+                            <div class="calendar-month-name">Сентябрь 2024</div>
+                            <div class="calendar-month-dates">
+                                <ul class="calendar-month-date-names">
+                                    <li>пн</li>
+                                    <li>вт</li>
+                                    <li>ср</li>
+                                    <li>чт</li>
+                                    <li>пт</li>
+                                    <li>сб</li>
+                                    <li>вс</li>
+                                </ul>
+                                <ul class="calendar-month-dates-days">
+                                    <li class="calendar-month-dates-day-past"></li>
+                                    <li class="calendar-month-dates-day-past"></li>
+                                    <li class="calendar-month-dates-day-past"></li>
+                                    <li class="calendar-month-dates-day-past"></li>
+                                    <li class="calendar-month-dates-day-past"></li>
+                                    <li class="calendar-month-dates-day-past">1</li>
+                                    <li class="calendar-month-dates-day-past">2</li>
+                                    <li class="calendar-month-dates-day-past">3</li>
+                                    <li class="calendar-month-dates-day-past">4</li>
+                                    <li class="calendar-month-dates-day-past">5</li>
+                                    <li class="calendar-month-dates-day-past">6</li>
+                                    <li class="calendar-month-dates-day-past">7</li>
+                                    <li class="calendar-month-dates-day-past">8</li>
+                                    <li class="calendar-month-dates-day-past">9</li>
+                                    <li class="calendar-month-dates-day-past">10</li>
+                                    <li class="calendar-month-dates-day-past">11</li>
+                                    <li class="calendar-month-dates-day-past">12</li>
+                                    <li class="calendar-month-dates-day-past">13</li>
+                                    <li class="calendar-month-dates-day-past">14</li>
+                                    <li class="calendar-month-dates-day-past">15</li>
+                                    <li class="calendar-month-dates-day-past">16</li>
+                                    <li class="calendar-month-dates-day-past">17</li>
+                                    <li class="calendar-month-dates-day-past">18</li>
+                                    <li class="calendar-month-dates-day-past">19</li>
+                                    <li class="calendar-month-dates-day-past">20</li>
+                                    <li class="calendar-month-dates-day-past">21</li>
+                                    <li class="calendar-month-dates-day-past">22</li>
+                                    <li class="calendar-month-dates-day-past">23</li>
+                                    <li class="calendar-month-dates-day-past">24</li>
+                                    <li class="calendar-month-dates-day-past">24</li>
+                                    <li class="calendar-month-dates-day-past">25</li>
+                                    <li class="calendar-month-dates-day-past">26</li>
+                                    <li class="calendar-month-dates-day-today">27</li>
+                                    <li>28</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="calendar-month">
+                            <div class="calendar-month-name">Май 2024</div>
+                            <div class="calendar-month-dates">
+                                <ul class="calendar-month-date-names">
+                                    <li>пн</li>
+                                    <li>вт</li>
+                                    <li>ср</li>
+                                    <li>чт</li>
+                                    <li>пт</li>
+                                    <li>сб</li>
+                                    <li>вс</li>
+                                </ul>
+                                <ul class="calendar-month-dates-days">
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                    <li>1</li>
+                                    <li>2</li>
+                                    <li>3</li>
+                                    <li>4</li>
+                                    <li class="calendar-month-dates-day-from">5</li>
+                                    <li class="calendar-month-dates-day-in-range">6</li>
+                                    <li class="calendar-month-dates-day-in-range">7</li>
+                                    <li class="calendar-month-dates-day-in-range">8</li>
+                                    <li class="calendar-month-dates-day-in-range">9</li>
+                                    <li class="calendar-month-dates-day-in-range">10</li>
+                                    <li class="calendar-month-dates-day-in-range">11</li>
+                                    <li class="calendar-month-dates-day-in-range">12</li>
+                                    <li class="calendar-month-dates-day-in-range">13</li>
+                                    <li class="calendar-month-dates-day-to">14</li>
+                                    <li>15</li>
+                                    <li>16</li>
+                                    <li>17</li>
+                                    <li>18</li>
+                                    <li>19</li>
+                                    <li>20</li>
+                                    <li>21</li>
+                                    <li>22</li>
+                                    <li>23</li>
+                                    <li>24</li>
+                                    <li>24</li>
+                                    <li>25</li>
+                                    <li>26</li>
+                                    <li>27</li>
+                                    <li>28</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="calendar-note">
+                        Для отображения цен необходимо выбрать маршрут
+                    </div>
+                </div>
+            </dialog>
             <div class="complex-route">Сложный маршрут</div>
         </div>
     </section>
