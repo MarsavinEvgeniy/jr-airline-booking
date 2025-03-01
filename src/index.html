@@ -41,52 +41,19 @@
                 <fieldset class="container-search-menu">
                     <div class="city-from">
                         <div>
-                            <div style="font-size: 10px; opacity: 0.5; margin-left: 3px">Откуда</div>
+                            <span style="font-size: 10px; opacity: 0.5; margin-left: 3px">Откуда</span>
                             <label for="city-from-input">
                                 <input style="position: relative" id="city-from-input" type="text" name="city-from"
-                                       value="Варшава"/>
+                                       value="Варшава" readonly/>
                             </label>
-                            <div class="city-from-dropdown-list">
-                                <div style="font-weight: bold; font-size: 12px">Выбранный город</div>
-                                <div class="selected-city-container">
-                                    <div class="selected-city">Варшава</div>
-                                    <div class="selected-city-code">Waw</div>
-                                </div>
-                                <div style="font-weight: bold; font-size: 12px">Ближайшие аэрапорты</div>
-                                <div class="city-from-dropdown-content">
-                                    <div>
-                                        <div class="city-dropdown-name">Кишенев</div>
-                                        <div class="city-dropdown-name">Балице</div>
-                                    </div>
-                                    <div class="city-to-dropdown-content-code">
-                                        <div class="city-dropdown-code">Rmo</div>
-                                        <div class="city-dropdown-code">Krk</div>
-                                    </div>
-                                </div>
-                            </div>
                         </div>
                     </div>
                     <div class="create-line"></div>
                     <div style="display: flex; flex-direction: row; margin-top: 10px">
                         <div class="city-to">
                             <label for="city-to-input">
-                                <input id="city-to-input" type="text" name="city-to-input" value="Куда"/>
+                                <input id="city-to-input" type="text" name="city-to-input" value="Куда" readonly/>
                             </label>
-                            <div class="city-to-dropdown-list">
-                                <div style="font-weight: bold; font-size: 12px; opacity: 0.6">Ближайшие аэрапорты</div>
-                                <div class="city-to-dropdown-content">
-                                    <div>
-                                        <div class="city-dropdown-name">Париж</div>
-                                        <div class="city-dropdown-name">Нью-Йорк</div>
-                                        <div class="city-dropdown-name">Лондон</div>
-                                    </div>
-                                    <div class="city-to-dropdown-content-code">
-                                        <div class="city-dropdown-code">Par</div>
-                                        <div class="city-dropdown-code">Nyc</div>
-                                        <div class="city-dropdown-code">Lon</div>
-                                    </div>
-                                </div>
-                            </div>
                         </div>
                         <div class="create-line-center"></div>
                         <div class="date-flight">
@@ -103,8 +70,9 @@
                     <div class="create-line"></div>
                     <div class="passengers-and-class-block">
                         <label for="passengers-and-class">
-                            <span style="font-size: 14px; opacity: 0.5">Пассажиры&#44; класс</span>
-                            <input id="passengers-and-class" type="text" name="text" value="1 пассажир&#44; любой"/>
+                            <span style="font-size: 10px; opacity: 0.5; margin-left: 3px">Пассажиры&#44; класс</span>
+                            <input id="passengers-and-class" type="text" name="text" value="1 пассажир&#44; любой"
+                                   readonly/>
                         </label>
                     </div>
                 </fieldset>
@@ -231,6 +199,96 @@
                 </div>
             </dialog>
             <div class="complex-route">Сложный маршрут</div>
+            <div class="city-from-dropdown-list">
+                <div style="font-weight: bold; font-size: 12px">Выбранный город</div>
+                <div class="selected-city-container">
+                    <div class="selected-city">Варшава</div>
+                    <div class="selected-city-code">Waw</div>
+                </div>
+                <div style="font-weight: bold; font-size: 12px">Ближайшие аэрапорты</div>
+                <div class="city-from-dropdown-content">
+                    <div>
+                        <div class="city-dropdown-name">Кишенев</div>
+                        <div class="city-dropdown-name">Балице</div>
+                    </div>
+                    <div class="city-to-dropdown-content-code">
+                        <div class="city-dropdown-code">Rmo</div>
+                        <div class="city-dropdown-code">Krk</div>
+                    </div>
+                </div>
+            </div>
+            <div class="city-to-dropdown-list">
+                <div style="font-weight: bold; font-size: 12px">Ближайшие аэрапорты</div>
+                <div class="city-to-dropdown-content">
+                    <div>
+                        <div class="city-dropdown-name">Париж</div>
+                        <div class="city-dropdown-name">Нью-Йорк</div>
+                        <div class="city-dropdown-name">Лондон</div>
+                    </div>
+                    <div class="city-to-dropdown-content-code">
+                        <div class="city-dropdown-code">Par</div>
+                        <div class="city-dropdown-code">Nyc</div>
+                        <div class="city-dropdown-code">Lon</div>
+                    </div>
+                </div>
+            </div>
+            <div class="passengers-and-class-dropdown-list">
+                <span>Максимум 9 пассажиров</span>
+                <section class="adult-passengers">
+                    <div>
+                        <div>Взрослые</div>
+                        <div style="color: rgb(171, 166, 166); font-size: 10px">Старше 12 лет</div>
+                    </div>
+                    <div>
+                        <button>-</button>
+                        <span>1</span>
+                        <button>+</button>
+                    </div>
+                </section>
+                <section class="children-passengers">
+                    <div>
+                        <div>Дети</div>
+                        <div style="color: rgb(171, 166, 166); font-size: 10px">2-12 лет</div>
+                    </div>
+                    <div>
+                        <button>-</button>
+                        <span>0</span>
+                        <button>+</button>
+                    </div>
+                </section>
+                <section class="babies-passengers">
+                    <div>
+                        <div>Младенцы</div>
+                        <div style="color: rgb(171, 166, 166); font-size: 10px">до 2 лет</div>
+                    </div>
+                    <div>
+                        <button>-</button>
+                        <span>0</span>
+                        <button>+</button>
+                    </div>
+                </section>
+                <hr style="width: 100%;opacity: 0.3">
+                <span>Класс</span>
+                <ul class="passengers-class">
+                    <li>
+                        <label>
+                            <input type="radio" name="choince-class"> Любой
+                        </label>
+
+                    </li>
+                    <li>
+                        <label>
+                            <input type="radio" name="choince-class">Бизнес
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                            <input type="radio" name="choince-class">Эконом
+                        </label>
+                    </li>
+                </ul>
+                <button class="passengers-bth">Ок</button>
+            </div>
         </div>
     </section>
 </header>

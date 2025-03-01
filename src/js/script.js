@@ -4,29 +4,31 @@ const cityToInput = document.querySelector("#city-to-input");
 const cityToDropdownList = document.querySelector(".city-to-dropdown-list");
 const cityFromInput = document.querySelector("#city-from-input");
 const cityFromDropdownList = document.querySelector(".city-from-dropdown-list");
+const passengersAndClassInput = document.querySelector("#passengers-and-class");
+const passengersAndClassDropdownList = document.querySelector(".passengers-and-class-dropdown-list");
 const city = ["Варшава"];
 const airport = ["Кишенев","Балице"];
 
-dateFlightShowCloseDialog.addEventListener("click", function () {
-    if (dialogCalendarContainer.style.display === "flex") {
-        dialogCalendarContainer.style.display = "none";
+const showClose = function (event) {
+    if (event.style.display === "flex") {
+        event.style.display = "none";
     } else {
-        dialogCalendarContainer.style.display = "flex"
+        event.style.display = "flex"
     }
+}
+
+dateFlightShowCloseDialog.addEventListener("click", function () {
+    showClose(dialogCalendarContainer);
 });
 
 cityToInput.addEventListener("click", function () {
-    if (cityToDropdownList.style.display === "flex") {
-        cityToDropdownList.style.display = "none";
-    } else {
-        cityToDropdownList.style.display = "flex"
-    }
-})
+    showClose(cityToDropdownList);
+});
 
 cityFromInput.addEventListener("click", function () {
-    if (cityFromDropdownList.style.display === "flex") {
-        cityFromDropdownList.style.display = "none";
-    } else {
-        cityFromDropdownList.style.display = "flex"
-    }
-})
+    showClose(cityFromDropdownList);
+});
+
+passengersAndClassInput.addEventListener("click", function () {
+    showClose(passengersAndClassDropdownList);
+});

@@ -44,8 +44,8 @@ body {
 }
 
 .nav-menu {
-    display: flex;
     align-items: center;
+    display: flex;
     font-size: 12px;
     color: var(--main-color-two);
 }
@@ -66,20 +66,6 @@ body {
     text-decoration: none;
 }
 
-@media (min-width: 320px) and (max-width: 768px) {
-    .nav-menu ul {
-        display: none;
-    }
-
-    .burger-menu {
-        display: flex;
-    }
-
-    header {
-        width: 100%;
-    }
-}
-
 .lang {
     margin-left: 30px;
 }
@@ -88,7 +74,9 @@ body {
     padding-left: 0;
 }
 
-.language li:after, .flights:after, .help:after {
+.language li:after,
+.flights:after,
+.help:after {
     content: url("/src/icons/bullet.svg");
     margin-left: 5px;
 }
@@ -189,6 +177,11 @@ body {
     font-size: 16px;
 }
 
+#city-from-input:focus {
+    outline: 0;
+    outline-offset: 0;
+}
+
 #city-to-input {
     display: flex;
     flex-direction: row;
@@ -197,16 +190,24 @@ body {
     opacity: 0.5;
 }
 
-.city-from-dropdown-content, .selected-city-code{
-    color: rgba(0, 0, 0, 0.6);
+#city-to-input:focus {
+    outline: 0;
+    outline-offset: 0;
 }
 
-.selected-city-container{
+.city-from-dropdown-content,
+.selected-city-code {
+    color: rgb(171, 166, 166);
+}
+
+.selected-city-container {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
-.city-to-dropdown-list, .city-from-dropdown-list {
+
+.city-to-dropdown-list,
+.city-from-dropdown-list {
     display: none;
     border-radius: 5px;
     position: absolute;
@@ -214,25 +215,94 @@ body {
     flex-direction: column;
     padding: 20px;
     font-size: 12px;
-    box-shadow: 0 2px 1px #000;
+    box-shadow: 0 1px 1px rgb(171, 166, 166);
     width: 350px;
 }
 
-.city-to-dropdown-content {
-    color: rgba(0, 0, 0, 0.6);
+.passengers-and-class-dropdown-list {
+    display: none;
+    border-radius: 5px;
+    position: absolute;
+    background-color: white;
+    flex-direction: column;
+    padding: 20px;
+    gap: 10px;
+    font-size: 12px;
+    box-shadow: 0 1px 1px rgb(171, 166, 166);
+    width: 200px;
 }
 
-.city-to-dropdown-content, .city-from-dropdown-content {
+.adult-passengers,
+.children-passengers,
+.babies-passengers {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
 
-.city-to-dropdown-content div, .city-from-dropdown-list div{
+.adult-passengers span,
+.children-passengers span,
+.babies-passengers span {
+    margin: 0 5px;
+}
+
+.passengers-class {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    list-style: none;
+    box-sizing: border-box;
+    margin: 0;
+    padding-inline-start: 0;
+    font-size: 12px;
+}
+
+.passengers-class li {
+    padding: 10px;
+    box-shadow: 0 1px 1px rgb(171, 166, 166);
+    border-radius: 20px;
+}
+
+.passengers-class li:hover {
+    background-color: var(--accent-color);
+    color: var(--main-color-two);
+}
+
+.passengers-class input[type="radio"]{
+    display: none;
+}
+
+.passengers-class label {
+    cursor: pointer;
+}
+
+.passengers-bth {
+    padding: 5px 0;
+    background-color: var(--accent-color);
+    border: none;
+    border-radius: 5px;
+    color: var(--main-color-two);
+}
+
+.city-to-dropdown-content {
+    color: rgb(171, 166, 166);
+}
+
+.city-to-dropdown-content,
+.city-from-dropdown-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.city-from-dropdown-list div,
+.city-to-dropdown-content div {
     padding: 8px 0;
 }
 
-.city-to-dropdown-content-code, .city-to-dropdown-content-code, .selected-city-code{
+.city-to-dropdown-content-code,
+.city-to-dropdown-content-code,
+.selected-city-code {
     text-transform: uppercase;
 }
 
@@ -258,7 +328,8 @@ body {
     content: "📅";
 }
 
-#city-from-input, #city-to-input {
+#city-from-input,
+#city-to-input {
     border: rgb(0, 0, 0, 0);
     margin-left: 0;
 }
@@ -266,6 +337,15 @@ body {
 .passengers-and-class-block {
     display: flex;
     flex-direction: row;
+}
+
+#passengers-and-class {
+    border: rgb(0, 0, 0, 0);
+}
+
+#passengers-and-class:focus {
+    outline: 0;
+    outline-offset: 0;
 }
 
 .container-search-btn {
@@ -499,7 +579,12 @@ body {
     margin-bottom: 50px;
 }
 
-.bus-tickets, .popular-destinations div, .top-airlines div, .frequently-asked-questions div, .manage-your-tickets-on-Telegram, .airline-ticket-hot-sales div {
+.bus-tickets,
+.popular-destinations div,
+.top-airlines div,
+.frequently-asked-questions div,
+.manage-your-tickets-on-Telegram,
+.airline-ticket-hot-sales div {
     background: var(--main-color-two);
     border-radius: 5px;
 }
@@ -781,7 +866,8 @@ body {
     cursor: pointer;
 }
 
-.google-play, .app-store {
+.google-play,
+.app-store {
     display: inline-block;
     cursor: pointer;
     position: absolute;
@@ -792,9 +878,125 @@ body {
     left: 510px;
 }
 
-.facebook, .instagram .telegram {
+.facebook,
+.instagram,
+.telegram {
     border: none;
     color: var(--main-color-two);
     background: var(--main-color-two);
     cursor: pointer;
+}
+@media (min-width: 320px) and (max-width: 768px) {
+    .nav-menu ul {
+        display: none;
+    }
+
+    .burger-menu {
+        display: flex;
+    }
+
+    .container-nav-menu {
+        margin-right: 10px;
+    }
+
+    .container-search-menu {
+
+    }
+
+    .container-proposals {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "line-1-1"
+            "line-1-2";
+    }
+
+    .container-information {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "line-2-1"
+            "line-2-2"
+            "line-3-1"
+            "line-3-2"
+            "line-4-2";
+    }
+
+    .popular-destinations-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .additional-line {
+        border-top: 1px solid #d5d8dc;
+    }
+
+    .popular-destinations-element-block {
+        flex-direction: column;
+        flex-shrink: min(50);
+    }
+
+    .popular-destinations-element-block p {
+        margin-top: 3px;
+        margin-bottom: 3px;
+    }
+
+    .price-popular-destinations {
+        margin-left: 0;
+    }
+
+    .container-footer-text a {
+        display: none;
+    }
+
+    .container-footer-text {
+        flex-direction: column;
+    }
+
+    .countries span, .cities span, .directions span, .airport span, .airlines span, .services span {
+        font-size: 0;
+    }
+
+    .countries a:last-child:after, .cities a:last-child:after, .directions a:last-child:after, .airport a:last-child:after, .airlines a:last-child:after, .services a:last-child:after {
+        content: ">";
+        color: #d5d8dc;
+        margin-top: auto;
+    }
+
+    .countries, .cities, .directions, .airport, .airlines, .services {
+        display: flex;
+        justify-content: space-between;
+        margin: 0 10px;
+        padding-top: 5px;
+    }
+
+    .airlines a:last-child {
+        padding-top: 0;
+    }
+
+    .services a:last-child {
+        padding-top: 0;
+    }
+
+    .container-footer-end {
+        flex-direction: column;
+    }
+
+    .left-side{
+        flex-direction: column;
+        padding-bottom: 10px;
+    }
+
+    .affiliate-program {
+        justify-content: center;
+        margin-right: 0;
+        padding: 5px 0;
+        margin-bottom: 15px;
+    }
+
+    .google-play, .app-store {
+        margin-left: 0;
+    }
+
+    .composition-footer hr{
+        display: none;
+    }
 }
