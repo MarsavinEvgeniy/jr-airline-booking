@@ -40,42 +40,255 @@
             <form class="container-search">
                 <fieldset class="container-search-menu">
                     <div class="city-from">
-                        <label for="city-from">
-                            <span style="font-size: 13px; opacity: 0.5">Откуда</span>
-                            <input style="position: relative" id="city-from" type="text" name="text" value="Варшава"/>
-                        </label>
+                        <div>
+                            <span style="font-size: 10px; opacity: 0.5; margin-left: 3px">Откуда</span>
+                            <label for="city-from-input">
+                                <input style="position: relative" id="city-from-input" type="text" name="city-from"
+                                       value="Варшава" readonly/>
+                            </label>
+                        </div>
                     </div>
                     <div class="create-line"></div>
                     <div style="display: flex; flex-direction: row; margin-top: 10px">
                         <div class="city-to">
-                            <label for="city-to">
-                                <input id="city-to" type="text" name="text" placeholder="Куда"/>
+                            <label for="city-to-input">
+                                <input id="city-to-input" type="text" name="city-to-input" value="Куда" readonly/>
                             </label>
                         </div>
                         <div class="create-line-center"></div>
-                        <div class="date-fromDate">
-                            <label for="date-fromDate">
-                                <input id="date-fromDate" type="text" name="text" placeholder="Туда"/>
-                            </label>
-                        </div>
-                        <div class="create-line-container-search-menu"></div>
-                        <div class="date-toDate">
-                            <label for="date-toDate">
-                                <input id="date-toDate" type="text" name="text" placeholder="Обратно"/>
-                            </label>
+                        <div class="date-flight">
+                            <div class="date-fromDate">
+                                <div class="date-there">Туда</div>
+                            </div>
+                            <div class="create-line-container-search-menu"></div>
+                            <div class="date-toDate">
+                                <div class="date-back">Обратно</div>
+                                <span class="icon-calendar"></span>
+                            </div>
                         </div>
                     </div>
                     <div class="create-line"></div>
                     <div class="passengers-and-class-block">
                         <label for="passengers-and-class">
-                            <span style="font-size: 14px; opacity: 0.5">Пассажиры&#44; класс</span>
-                            <input id="passengers-and-class" type="text" name="text" value="1 пассажир&#44; любой"/>
+                            <span style="font-size: 10px; opacity: 0.5; margin-left: 3px">Пассажиры&#44; класс</span>
+                            <input id="passengers-and-class" type="text" name="text" value="1 пассажир&#44; любой"
+                                   readonly/>
                         </label>
                     </div>
                 </fieldset>
                 <button class="container-search-btn"><span>Найти</span></button>
             </form>
+            <dialog class="calendar-container" open>
+                <div class="calendar">
+                    <div class="calendar-header">
+                        <div class="calendar-label">Выберите дату туда</div>
+                        <div class="calendar-date-controls">
+                            <button class="calendar-date-control">В одну сторону</button>
+                        </div>
+                    </div>
+                    <div class="calendar-controls">
+                        <button class="calendar-month-control calendar-month-control-rev">Назад</button>
+                        <button class="calendar-month-control calendar-month-control-fwd">Вперед</button>
+                    </div>
+                    <div class="calendar-dates">
+                        <div class="calendar-month">
+                            <div class="calendar-month-name">Сентябрь 2024</div>
+                            <div class="calendar-month-dates">
+                                <ul class="calendar-month-date-names">
+                                    <li>пн</li>
+                                    <li>вт</li>
+                                    <li>ср</li>
+                                    <li>чт</li>
+                                    <li>пт</li>
+                                    <li>сб</li>
+                                    <li>вс</li>
+                                </ul>
+                                <ul class="calendar-month-dates-days">
+                                    <li class="calendar-month-dates-day-past"></li>
+                                    <li class="calendar-month-dates-day-past"></li>
+                                    <li class="calendar-month-dates-day-past"></li>
+                                    <li class="calendar-month-dates-day-past"></li>
+                                    <li class="calendar-month-dates-day-past"></li>
+                                    <li class="calendar-month-dates-day-past">1</li>
+                                    <li class="calendar-month-dates-day-past">2</li>
+                                    <li class="calendar-month-dates-day-past">3</li>
+                                    <li class="calendar-month-dates-day-past">4</li>
+                                    <li class="calendar-month-dates-day-past">5</li>
+                                    <li class="calendar-month-dates-day-past">6</li>
+                                    <li class="calendar-month-dates-day-past">7</li>
+                                    <li class="calendar-month-dates-day-past">8</li>
+                                    <li class="calendar-month-dates-day-past">9</li>
+                                    <li class="calendar-month-dates-day-past">10</li>
+                                    <li class="calendar-month-dates-day-past">11</li>
+                                    <li class="calendar-month-dates-day-past">12</li>
+                                    <li class="calendar-month-dates-day-past">13</li>
+                                    <li class="calendar-month-dates-day-past">14</li>
+                                    <li class="calendar-month-dates-day-past">15</li>
+                                    <li class="calendar-month-dates-day-past">16</li>
+                                    <li class="calendar-month-dates-day-past">17</li>
+                                    <li class="calendar-month-dates-day-past">18</li>
+                                    <li class="calendar-month-dates-day-past">19</li>
+                                    <li class="calendar-month-dates-day-past">20</li>
+                                    <li class="calendar-month-dates-day-past">21</li>
+                                    <li class="calendar-month-dates-day-past">22</li>
+                                    <li class="calendar-month-dates-day-past">23</li>
+                                    <li class="calendar-month-dates-day-past">24</li>
+                                    <li class="calendar-month-dates-day-past">24</li>
+                                    <li class="calendar-month-dates-day-past">25</li>
+                                    <li class="calendar-month-dates-day-past">26</li>
+                                    <li class="calendar-month-dates-day-today">27</li>
+                                    <li>28</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="calendar-month">
+                            <div class="calendar-month-name">Май 2024</div>
+                            <div class="calendar-month-dates">
+                                <ul class="calendar-month-date-names">
+                                    <li>пн</li>
+                                    <li>вт</li>
+                                    <li>ср</li>
+                                    <li>чт</li>
+                                    <li>пт</li>
+                                    <li>сб</li>
+                                    <li>вс</li>
+                                </ul>
+                                <ul class="calendar-month-dates-days">
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                    <li>1</li>
+                                    <li>2</li>
+                                    <li>3</li>
+                                    <li>4</li>
+                                    <li class="calendar-month-dates-day-from">5</li>
+                                    <li class="calendar-month-dates-day-in-range">6</li>
+                                    <li class="calendar-month-dates-day-in-range">7</li>
+                                    <li class="calendar-month-dates-day-in-range">8</li>
+                                    <li class="calendar-month-dates-day-in-range">9</li>
+                                    <li class="calendar-month-dates-day-in-range">10</li>
+                                    <li class="calendar-month-dates-day-in-range">11</li>
+                                    <li class="calendar-month-dates-day-in-range">12</li>
+                                    <li class="calendar-month-dates-day-in-range">13</li>
+                                    <li class="calendar-month-dates-day-to">14</li>
+                                    <li>15</li>
+                                    <li>16</li>
+                                    <li>17</li>
+                                    <li>18</li>
+                                    <li>19</li>
+                                    <li>20</li>
+                                    <li>21</li>
+                                    <li>22</li>
+                                    <li>23</li>
+                                    <li>24</li>
+                                    <li>24</li>
+                                    <li>25</li>
+                                    <li>26</li>
+                                    <li>27</li>
+                                    <li>28</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="calendar-note">
+                        Для отображения цен необходимо выбрать маршрут
+                    </div>
+                </div>
+            </dialog>
             <div class="complex-route">Сложный маршрут</div>
+            <div class="city-from-dropdown-list">
+                <div style="font-weight: bold; font-size: 12px">Выбранный город</div>
+                <div class="selected-city-container">
+                    <div class="selected-city">Варшава</div>
+                    <div class="selected-city-code">Waw</div>
+                </div>
+                <div style="font-weight: bold; font-size: 12px">Ближайшие аэрапорты</div>
+                <div class="city-from-dropdown-content">
+                    <div>
+                        <div class="city-dropdown-name">Кишенев</div>
+                        <div class="city-dropdown-name">Балице</div>
+                    </div>
+                    <div class="city-to-dropdown-content-code">
+                        <div class="city-dropdown-code">Rmo</div>
+                        <div class="city-dropdown-code">Krk</div>
+                    </div>
+                </div>
+            </div>
+            <div class="city-to-dropdown-list">
+                <div style="font-weight: bold; font-size: 12px">Ближайшие аэрапорты</div>
+                <div class="city-to-dropdown-content">
+                    <div>
+                        <div class="city-dropdown-name">Париж</div>
+                        <div class="city-dropdown-name">Нью-Йорк</div>
+                        <div class="city-dropdown-name">Лондон</div>
+                    </div>
+                    <div class="city-to-dropdown-content-code">
+                        <div class="city-dropdown-code">Par</div>
+                        <div class="city-dropdown-code">Nyc</div>
+                        <div class="city-dropdown-code">Lon</div>
+                    </div>
+                </div>
+            </div>
+            <div class="passengers-and-class-dropdown-list">
+                <span>Максимум 9 пассажиров</span>
+                <section class="adult-passengers">
+                    <div>
+                        <div>Взрослые</div>
+                        <div style="color: rgb(171, 166, 166); font-size: 10px">Старше 12 лет</div>
+                    </div>
+                    <div>
+                        <button>-</button>
+                        <span>1</span>
+                        <button>+</button>
+                    </div>
+                </section>
+                <section class="children-passengers">
+                    <div>
+                        <div>Дети</div>
+                        <div style="color: rgb(171, 166, 166); font-size: 10px">2-12 лет</div>
+                    </div>
+                    <div>
+                        <button>-</button>
+                        <span>0</span>
+                        <button>+</button>
+                    </div>
+                </section>
+                <section class="babies-passengers">
+                    <div>
+                        <div>Младенцы</div>
+                        <div style="color: rgb(171, 166, 166); font-size: 10px">до 2 лет</div>
+                    </div>
+                    <div>
+                        <button>-</button>
+                        <span>0</span>
+                        <button>+</button>
+                    </div>
+                </section>
+                <hr style="width: 100%;opacity: 0.3">
+                <span>Класс</span>
+                <ul class="passengers-class">
+                    <li>
+                        <label>
+                            <input type="radio" name="choince-class"> Любой
+                        </label>
+
+                    </li>
+                    <li>
+                        <label>
+                            <input type="radio" name="choince-class">Бизнес
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                            <input type="radio" name="choince-class">Эконом
+                        </label>
+                    </li>
+                </ul>
+                <button class="passengers-bth">Ок</button>
+            </div>
         </div>
     </section>
 </header>
@@ -90,14 +303,13 @@
             </ul>
             <a href="#">Посмотреть возможности</a>
         </article>
-        <br/>
         <article class="bus-tickets">
             <h3>Билеты на автобус по Китаю и Европе</h3>
             <ul>
                 <li>Удобное сравнение цен</li>
                 <li>Актуальное расписание</li>
             </ul>
-            <button>Найти билеты</button>
+            <a href="#">Найти билеты</a>
         </article>
     </section>
     <section class="container-information">
@@ -111,6 +323,7 @@
                             <p>от 771 &#8372</p>
                         </div>
                     </div>
+                    <span class="additional-line"></span>
                     <div class="popular-destinations-element-block">
                         <p>Варшава &#8594; Амстердам</p>
                         <div class="price-popular-destinations">
@@ -124,6 +337,7 @@
                             <p>от 1001 &#8372</p>
                         </div>
                     </div>
+                    <span class="additional-line"></span>
                     <div class="popular-destinations-element-block">
                         <p>Варшава &#8594; Лиссабон</p>
                         <div class="price-popular-destinations">
@@ -137,6 +351,7 @@
                             <p>от 1424 &#8372</p>
                         </div>
                     </div>
+                    <span class="additional-line"></span>
                     <div class="popular-destinations-element-block">
                         <p>Варшава &#8594; Париж</p>
                         <div class="price-popular-destinations">
@@ -150,6 +365,7 @@
                             <p>от 1646 &#8372</p>
                         </div>
                     </div>
+                    <span class="additional-line"></span>
                     <div class="popular-destinations-element-block">
                         <p>Варшава &#8594; Нью-Йорк</p>
                         <div class="price-popular-destinations">
@@ -163,6 +379,7 @@
                             <p>от 1663 &#8372</p>
                         </div>
                     </div>
+                    <span class="additional-line"></span>
                     <div class="popular-destinations-element-block">
                         <p>Варшава &#8594; Днепасар-Бали</p>
                         <div class="price-popular-destinations">
@@ -281,9 +498,9 @@
                     <p>Лучшие предложения для путешествий</p>
                     <img src="icons/subscribe-laptop.svg" style="width: 70px;height: auto" alt="icon subscribe laptop">
                 </div>
-                <form>
+                <form class="best-offers-subscribe">
                     <label>
-                        <input type="email" name="email" placeholder="email*" required>
+                        <input type="email" name="email" placeholder="Email*" required>
                     </label>
                     <button><span>Подписаться</span></button>
                 </form>
@@ -301,79 +518,85 @@
             <img src="icons/mastercard.svg" style="width: 50px; height: 120px;" alt="icon mastercard">
         </section>
         <section class="container-footer-text">
+            <div class="additional-line"></div>
             <div class="countries">
-                <p><b>Страны</b></p>
-                <p>Испания</p>
-                <p>Турция</p>
-                <p>Египет</p>
-                <p>Грузия</p>
-                <p>Польша</p>
-                <p>Франция</p>
-                <a href="#">Все страны</a>
+                <h4>Страны</h4>
+                <a href="#">Испания</a>
+                <a href="#">Турция</a>
+                <a href="#">Египет</a>
+                <a href="#">Грузия</a>
+                <a href="#">Польша</a>
+                <a href="#">Франция</a>
+                <a href="#"><span>Все страны</span></a>
             </div>
+            <div class="additional-line"></div>
             <div class="cities">
-                <p><b>Города</b></p>
-                <p>Кишинев</p>
-                <p>Дубай</p>
-                <p>Варшава</p>
-                <p>Прага</p>
-                <p>Париж</p>
-                <p>Франкфурт</p>
-                <a href="#">Все города</a>
+                <h4>Города</h4>
+                <a href="#">Кишинев</a>
+                <a href="#">Дубай</a>
+                <a href="#">Варшава</a>
+                <a href="#">Прага</a>
+                <a href="#">Париж</a>
+                <a href="#">Франкфурт</a>
+                <a href="#"><span>Все города</span></a>
             </div>
+            <div class="additional-line"></div>
             <div class="directions">
-                <p><b>Направления</b></p>
-                <p>Кишенев - Стамбул</p>
-                <p>Кишенев - Анталия</p>
-                <p>Варшава - Торонто</p>
-                <p>Варшава - Париж</p>
-                <p>Кишенев - Тбилиси</p>
-                <p>Кишенев - Стамбул</p>
-                <a href="#">Все направления</a>
+                <h4>Направления</h4>
+                <a href="#">Кишенев - Стамбул</a>
+                <a href="#">Кишенев - Анталия</a>
+                <a href="#">Варшава - Торонто</a>
+                <a href="#">Варшава - Париж</a>
+                <a href="#">Кишенев - Тбилиси</a>
+                <a href="#">Кишенев - Стамбул</a>
+                <a href="#"><span>Все направления</span></a>
             </div>
+            <div class="additional-line"></div>
             <div class="airport">
-                <p><b>Аэропорт</b></p>
-                <p>ФюШопен(Варшава)</p>
-                <p>Франкфурт Интернешн...</p>
-                <p>Аэропорт Кишинев (Ки...</p>
-                <p>Фиумичино (Рим)</p>
-                <p>Аэропорт Стамбул (Ста...</p>
-                <p>Шарль Де Голль (Париж)</p>
-                <a href="#">Все аэропорты</a>
+                <h4>Аэропорт</h4>
+                <a href="#">ФюШопен(Варшава)</a>
+                <a href="#">Франкфурт Интернешн...</a>
+                <a href="#">Аэропорт Кишинев (Ки...</a>
+                <a href="#">Фиумичино (Рим)</a>
+                <a href="#">Аэропорт Стамбул (Ста...</a>
+                <a href="#">Шарль Де Голль (Париж)</a>
+                <a href="#"><span>Все аэропорты</span></a>
             </div>
+            <div class="additional-line"></div>
             <div class="airlines">
-                <p><b>Авиакомпании</b></p>
-                <p>Тюркиш Эрлайнз</p>
-                <p>Wizz Air Украина</p>
-                <p>Qatar Airways</p>
-                <p>Ryanair</p>
-                <p>Air Baltic</p>
-                <br/><br/>
-                <a href="#">Все авивкомпании</a>
+                <h4>Авиакомпании</h4>
+                <a href="#">Тюркиш Эрлайнз</a>
+                <a href="#">Wizz Air Украина</a>
+                <a href="#">Qatar Airways</a>
+                <a href="#">Ryanair</a>
+                <a href="#">Air Baltic</a>
+                <a href="#"><span>Все авиакомпании</span></a>
             </div>
+            <div class="additional-line"></div>
             <div class="services">
-                <p><b>Наши сервисы</b></p>
-                <p>Рейтинг авиакомпаний</p>
-                <p>Сравнение цен</p>
-                <p>Расписание рейсов</p>
-                <p>Акции</p>
-                <br/><br/><br/><br/>
-                <a href="#">Карта сайта</a>
+                <h4>Наши сервисы</h4>
+                <a href="#">Рейтинг авиакомпаний</a>
+                <a href="#">Сравнение цен</a>
+                <a href="#">Расписание рейсов</a>
+                <a href="#">Акции</a>
+                <a href="#"><span>Карта сайта</span></a>
             </div>
         </section>
+        <div class="additional-line"></div>
         <hr>
-        <div style="display:flex; margin: 25px 10px; padding-bottom: 20px">
-            <div style="text-align:start; width: 60%">
-                <a class="affiliate-program" href="#" style="text-decoration: none; border-radius: 5px">Партнерская
-                    программа</a>
-                <a class="google-play" href="#"><img src="icons/google-play-store.svg"
-                                                     style="width: 100px;height: auto;"
-                                                     alt="link icon apple app store"></a>
-                <a class="app-store" href="#"><img src="icons/apple-app-store.svg"
-                                                   style="width: 100px;height: auto;"
-                                                   alt="link icon apple app store"></a>
+        <section class="container-footer-end">
+            <div class="left-side">
+                <a class="affiliate-program" href="#">Партнерская программа</a>
+                <div>
+                    <a class="google-play" href="#"><img src="icons/google-play-store.svg"
+                                                         style="width: 100px;height: auto;"
+                                                         alt="link icon apple app store"></a>
+                    <a class="app-store" href="#"><img src="icons/apple-app-store.svg"
+                                                       style="width: 100px;height: auto;"
+                                                       alt="link icon apple app store"></a>
+                </div>
             </div>
-            <div style="text-align: end ;width: 40%">
+            <div class="right-side">
                 <a class="facebook" href="#"><img src="icons/facebook.svg" style=" width: 30px;height: 30px;"
                                                   alt="link icon facebook"></a>
                 <a class="instagram" href="#"><img src="icons/instagram.svg" style=" width: 30px;height: 30px;"
@@ -381,7 +604,7 @@
                 <a class="telegram" href="#"><img src="icons/telegram.svg" style=" width: 30px;height: 30px;"
                                                   alt="link icon telegram"></a>
             </div>
-        </div>
+        </section>
     </div>
 </footer>
 

@@ -11,8 +11,8 @@
 }
 
 body {
-    font-family: 'FontInter', sans-serif;
     background: #EFF1F4;
+    font-family: 'FontInter', sans-serif;
     margin: 0;
 }
 
@@ -29,10 +29,10 @@ body {
 }
 
 .bar {
-    width: 20px;
-    height: 2px;
     background-color: white;
+    height: 2px;
     margin: 2px;
+    width: 20px;
 }
 
 .container-nav-menu {
@@ -44,10 +44,10 @@ body {
 }
 
 .nav-menu {
-    display: flex;
     align-items: center;
-    font-size: 12px;
     color: var(--main-color-two);
+    display: flex;
+    font-size: 12px;
 }
 
 .nav-menu ul {
@@ -66,20 +66,6 @@ body {
     text-decoration: none;
 }
 
-@media (min-width: 320px) and (max-width: 768px) {
-    .nav-menu ul {
-        display: none;
-    }
-
-    .burger-menu {
-        display: flex;
-    }
-
-    header {
-        width: 100%;
-    }
-}
-
 .lang {
     margin-left: 30px;
 }
@@ -88,7 +74,9 @@ body {
     padding-left: 0;
 }
 
-.language li:after, .flights:after, .help:after {
+.language li:after,
+.flights:after,
+.help:after {
     content: url("/src/icons/bullet.svg");
     margin-left: 5px;
 }
@@ -98,16 +86,16 @@ body {
 }
 
 .nav-menu-sections a {
-    display: inline-flex;
     background: #8853dd;
     border-radius: 20px;
-    text-decoration: none;
-    font-size: 12px;
-    padding: 8px 15px;
-    margin: 1px 1px 15px 1px;
-    font-weight: bold;
     color: var(--main-color-two);
     cursor: pointer;
+    display: inline-flex;
+    font-size: 12px;
+    font-weight: bold;
+    margin: 1px 1px 15px 1px;
+    padding: 8px 15px;
+    text-decoration: none;
 }
 
 .discount-hotel {
@@ -119,14 +107,14 @@ body {
 }
 
 .discount-hotel:after {
-    content: "-60%";
-    position: relative;
-    bottom: 2px;
-    margin-left: 5px;
-    border-radius: 20px;
-    height: 15px;
     background-color: #07b407;
+    bottom: 2px;
+    border-radius: 20px;
     color: var(--main-color-two);
+    content: "-60%";
+    height: 15px;
+    margin-left: 5px;
+    position: relative;
     padding: 2px 5px;
 }
 
@@ -142,54 +130,204 @@ body {
 }
 
 .container-search-menu {
-    display: flex;
-    width: 50%;
-    flex-direction: row;
     background-color: var(--main-color-two);
     border: none;
-    border-radius: 5px;
+    border-radius: 3px;
+    display: flex;
+    flex-direction: row;
     padding-top: 10px;
+    width: 50%;
 }
 
 
 .create-line {
-    position: relative;
-    height: 60px;
     border-left: 2px solid #afaaaa;
-    opacity: 0.5;
-    margin-right: 10px;
     bottom: 10px;
+    height: 60px;
+    margin-right: 10px;
+    opacity: 0.5;
+    position: relative;
 }
 
 .create-line-center {
-    position: relative;
-    height: 60px;
     border-left: 2px solid #afaaaa;
-    opacity: 0.5;
-    margin-right: 10px;
     bottom: 20px;
+    height: 60px;
+    margin-right: 10px;
+    opacity: 0.5;
+    position: relative;
 }
 
 .create-line-container-search-menu {
-    margin-right: 10px;
-    height: 20px;
     border-left: 2px solid #afaaaa;
+    height: 20px;
+    opacity: 0.5;
+    margin-right: 10px;
+}
+
+.city-from {
+    align-items: center;
+    display: flex;
+}
+
+#city-from-input {
+    display: flex;
+    flex-direction: column;
+    font-size: 16px;
+    width: 200px;
+}
+
+#city-from-input:focus,
+#city-to-input:focus {
+    outline: 0;
+    outline-offset: 0;
+}
+
+#city-to-input {
+    display: flex;
+    flex-direction: row;
+    font-size: 16px;
+    opacity: 0.5;
+    width: 200px;
+}
+
+.city-from-dropdown-content,
+.selected-city-code {
+    color: rgb(171, 166, 166);
+}
+
+.selected-city-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.city-to-dropdown-list,
+.city-from-dropdown-list {
+    background-color: var(--main-color-two);
+    border-radius: 5px;
+    box-shadow: 0 1px 1px rgb(171, 166, 166);
+    display: none;
+    flex-direction: column;
+    font-size: 12px;
+    position: absolute;
+    padding: 20px;
+    width: 350px;
+}
+
+.passengers-and-class-dropdown-list {
+    background-color: var(--main-color-two);
+    box-shadow: 0 1px 1px rgb(171, 166, 166);
+    border-radius: 5px;
+    display: none;
+    flex-direction: column;
+    font-size: 12px;
+    gap: 10px;
+    position: absolute;
+    padding: 20px;
+    width: 200px;
+}
+
+.adult-passengers,
+.children-passengers,
+.babies-passengers {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.adult-passengers span,
+.children-passengers span,
+.babies-passengers span {
+    margin: 0 5px;
+}
+
+.passengers-class {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    font-size: 12px;
+    justify-content: space-between;
+    list-style: none;
+    margin: 0;
+    padding-inline-start: 0;
+}
+
+.passengers-class li {
+    box-shadow: 0 1px 1px rgb(171, 166, 166);
+    border-radius: 20px;
+    padding: 10px;
+}
+
+.passengers-class li:hover {
+    background-color: var(--accent-color);
+    color: var(--main-color-two);
+}
+
+.passengers-class input[type="radio"] {
+    display: none;
+}
+
+.passengers-class label {
+    cursor: pointer;
+}
+
+.passengers-bth {
+    background-color: var(--accent-color);
+    border: none;
+    border-radius: 5px;
+    color: var(--main-color-two);
+    padding: 5px 0;
+}
+
+.city-to-dropdown-content {
+    color: rgb(171, 166, 166);
+}
+
+.city-to-dropdown-content,
+.city-from-dropdown-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.city-from-dropdown-list div,
+.city-to-dropdown-content div {
+    padding: 8px 0;
+}
+
+.city-to-dropdown-content-code,
+.city-to-dropdown-content-code,
+.selected-city-code {
+    text-transform: uppercase;
+}
+
+.date-flight {
+    display: flex;
+    flex-direction: row;
     opacity: 0.5;
 }
 
-.city-from, .city-to {
-    display: flex;
-    flex-direction: row;
+.date-fromDate {
+    width: 100px;
 }
 
-.date-fromDate, .date-toDate {
+.date-toDate {
     display: flex;
     flex-direction: row;
-    width: 120px;
+    justify-content: space-around;
+    text-align: center;
+    width: 100px;
 }
 
-.city-from input, .city-to input, .date-fromDate input, .date-toDate input, .passengers-and-class-block input {
+.icon-calendar:after {
+    content: "📅";
+}
+
+#city-from-input,
+#city-to-input {
     border: rgb(0, 0, 0, 0);
+    margin-left: 0;
 }
 
 .passengers-and-class-block {
@@ -197,29 +335,211 @@ body {
     flex-direction: row;
 }
 
+#passengers-and-class {
+    border: rgb(0, 0, 0, 0);
+}
+
+#passengers-and-class:focus {
+    outline: 0;
+    outline-offset: 0;
+}
+
 .container-search-btn {
+    background-color: var(--accent-color);
+    border-radius: 3px;
+    border: none;
+    color: var(--main-color-two);
     display: flex;
     flex-direction: row;
-    background-color: var(--accent-color);
-    color: var(--main-color-two);
-    border-radius: 5px;
-    padding: 22px 30px;
     margin-left: 5px;
-    border: none;
+    padding: 22px 35px;
 }
 
 .complex-route {
     color: var(--main-color-two);
-    opacity: 0.9;
+    cursor: pointer;
     font-size: 12px;
     font-weight: bold;
-    cursor: pointer;
+    opacity: 0.9;
     padding-top: 10px;
 }
 
 .complex-route:before {
     content: url("/src/icons/route.svg");
     margin-right: 8px;
+}
+
+.calendar-container {
+    background: #fff;
+    border: 0;
+    border-radius: 2px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    display: none;
+}
+
+.calendar {
+    position: relative;
+    --highlight-color: rgba(247, 64, 105, 1);
+    --highlight-transparent-color: color(srgb 0.9992 0.9106 0.9296);
+    --lighter-text-color: #666;
+    --font-size-smaller: 87.5%;
+    --font-size-smallest: 75%;
+}
+
+.calendar-header {
+    align-items: baseline;
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    margin-bottom: 1.6em;
+}
+
+.calendar-label {
+    font-weight: 500;
+}
+
+.calendar-date-control {
+    background: var(--highlight-transparent-color);
+    border: 0;
+    border-radius: 5px;
+    color: var(--highlight-color);
+    font-size: var(--font-size-smaller);
+    line-height: 2.4rem;
+    width: 100%;
+}
+
+.calendar-month-control {
+    background: transparent;
+    border: 0;
+    font-size: 0;
+    position: absolute;
+}
+
+.calendar-month-control::before {
+    /* TODO: Заменить на картинку */
+    color: #bbb;
+    font-size: 16px;
+}
+
+.calendar-month-control-rev {
+    left: 0;
+}
+
+.calendar-month-control-rev::before {
+    content: "<";
+}
+
+.calendar-month-control-fwd {
+    right: 0;
+}
+
+.calendar-month-control-fwd::before {
+    content: ">";
+}
+
+.calendar-month-name {
+    font-size: var(--font-size-smaller);
+    text-align: center;
+    line-height: 2rem;
+    white-space: nowrap;
+}
+
+.calendar-dates {
+    align-items: flex-start;
+    display: flex;
+    gap: 25px;
+}
+
+.calendar-month-date-names,
+.calendar-month-dates-days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.calendar-month-dates-days {
+    gap: 0.4rem 0;
+}
+
+.calendar-month-date-names li,
+.calendar-month-dates-days li {
+    font-size: var(--font-size-smaller);
+    line-height: 2.5rem;
+    min-width: 3rem;
+    text-align: center;
+}
+
+.calendar-month-date-names li {
+    color: var(--lighter-text-color);
+    font-size: var(--font-size-smallest);
+    font-weight: 500;
+}
+
+.calendar-month-dates-day-past {
+    color: #ccc;
+}
+
+.calendar-month-dates-day-today {
+    background: #ccc;
+}
+
+.calendar-month-dates-day-today,
+.calendar-month-dates-day-from,
+.calendar-month-dates-day-to {
+    border-radius: 0 0 5px 5px;
+    position: relative;
+}
+
+.calendar-month-dates-day-today::before,
+.calendar-month-dates-day-from::before,
+.calendar-month-dates-day-to::before {
+    border-radius: 5px 5px 0 0;
+    font-size: 60%;
+    line-height: 1.5;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 100%
+}
+
+.calendar-month-dates-day-today::before {
+    background: #ccc;
+    content: "Сегодня";
+}
+
+.calendar-month-dates-day-from,
+.calendar-month-dates-day-to {
+    background: var(--highlight-color);
+    color: #fff;
+}
+
+.calendar-month-dates-day-from::before,
+.calendar-month-dates-day-to::before {
+    background: var(--highlight-color);
+}
+
+.calendar-month-dates-day-from::before {
+    content: "Туда"
+}
+
+.calendar-month-dates-day-to::before {
+    content: "Обратно"
+}
+
+.calendar-month-dates-day-in-range {
+    background: rgba(254, 234, 246, 1);
+}
+
+.calendar-note {
+    color: var(--lighter-text-color);
+    font-size: var(--font-size-smallest);
+    margin-top: 1rem;
+}
+
+.calendar-note::before {
+    content: "👉";
+    margin-right: 0.5rem;
 }
 
 .main-content {
@@ -255,7 +575,12 @@ body {
     margin-bottom: 50px;
 }
 
-.bus-tickets, .popular-destinations div, .top-airlines div, .frequently-asked-questions div, .manage-your-tickets-on-Telegram, .airline-ticket-hot-sales div {
+.bus-tickets,
+.popular-destinations div,
+.top-airlines div,
+.frequently-asked-questions div,
+.manage-your-tickets-on-Telegram,
+.airline-ticket-hot-sales div {
     background: var(--main-color-two);
     border-radius: 5px;
 }
@@ -283,7 +608,7 @@ body {
 
 .manage-your-tickets-on-Telegram {
     grid-area: line-1-1;
-    padding: 20px;
+    padding: 10px 20px 60px 20px;
 }
 
 .manage-your-tickets-on-Telegram ul {
@@ -313,7 +638,7 @@ body {
 
 .bus-tickets {
     grid-area: line-1-2;
-    padding: 20px;
+    padding: 10px 20px 60px 20px;
 }
 
 .bus-tickets ul {
@@ -330,6 +655,15 @@ body {
     top: 0;
     left: 0;
     color: green;
+}
+
+.bus-tickets a {
+    background: var(--accent-color);
+    border-radius: 5px;
+    text-decoration: none;
+    color: var(--main-color-two);
+    padding: 10px 20px;
+    cursor: pointer;
 }
 
 .popular-destinations {
@@ -465,12 +799,18 @@ body {
     height: 160px;
 }
 
+.best-offers-subscribe {
+    display: inline-flex;
+    align-items: center;
+}
+
 .best-offers input {
     padding: 10px;
-    border-radius: 5px;
+    border-radius: 3px;
     border: 1px solid var(--accent-color);
     margin-right: 0;
 }
+
 .best-offers input::placeholder {
     font-weight: bold;
     opacity: 0.5;
@@ -480,10 +820,9 @@ body {
 .best-offers button {
     background: var(--accent-color);
     border: none;
-    border-radius: 5px;
+    border-radius: 3px;
     color: var(--main-color-two);
-    padding: 10px 15px;
-    margin-left: -5px;
+    padding: 10px 18px;
 }
 
 .best-offers button span {
@@ -510,46 +849,214 @@ body {
     justify-content: space-between;
 }
 
+.container-footer-text h4 {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-bottom: 5px;
+}
+
 .container-footer-text {
     display: flex;
     justify-content: space-between;
-    padding: 0 10px;
+    flex-direction: row;
 }
 
-.container-footer a {
+.container-footer-text a {
+    display: flex;
     text-decoration: none;
+    color: #111;
+    flex-direction: column;
+    padding: 4px 0;
+    opacity: 0.8;
+    font-size: 14px;
+}
+
+.container-footer-text a:last-child {
+    display: flex;
+    flex-direction: row;
     color: #3cadfb;
 }
 
-.container-footer-text a:after {
+.airlines a:last-child {
+    padding-top: 30px;
+}
+
+.services a:last-child {
+    padding-top: 55px;
+}
+
+.container-footer-text a:last-child:after {
     content: "→";
     margin-left: 3px;
 }
 
+
+.container-footer-end {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.left-side {
+    display: flex;
+}
+
 .affiliate-program {
-    background: var(--main-color-two);
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
     border: 1px solid #3cadfb;
     color: #3cadfb;
+    border-radius: 3px;
+    padding: 0 15px;
     font-size: 12px;
-    padding: 7px 15px;
-    position: absolute;
-    cursor: pointer;
+    margin-right: 8px;
 }
 
-.google-play, .app-store {
-    display: inline-block;
-    cursor: pointer;
-    position: absolute;
-    left: 400px;
-}
-
+.google-play,
 .app-store {
-    left: 510px;
+    display: inline-flex;
+    margin-left: 7px;
 }
 
-.facebook, .instagram .telegram {
+.facebook,
+.instagram,
+.telegram {
     border: none;
     color: var(--main-color-two);
     background: var(--main-color-two);
     cursor: pointer;
+    margin-left: 5px;
+}
+
+@media (min-width: 320px) and (max-width: 768px) {
+    .nav-menu ul {
+        display: none;
+    }
+
+    .burger-menu {
+        display: flex;
+    }
+
+    .container-nav-menu {
+        margin-right: 10px;
+    }
+
+    .container-search-menu {
+
+    }
+
+    .container-proposals {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "line-1-1"
+            "line-1-2";
+    }
+
+    .container-information {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "line-2-1"
+            "line-2-2"
+            "line-3-1"
+            "line-3-2"
+            "line-4-2";
+    }
+
+    .popular-destinations-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .additional-line {
+        border-top: 1px solid #d5d8dc;
+    }
+
+    .popular-destinations-element-block {
+        flex-direction: column;
+        flex-shrink: min(50);
+    }
+
+    .popular-destinations-element-block p {
+        margin-top: 3px;
+        margin-bottom: 3px;
+    }
+
+    .price-popular-destinations {
+        margin-left: 0;
+    }
+
+    .container-footer-text a {
+        display: none;
+    }
+
+    .container-footer-text {
+        flex-direction: column;
+    }
+
+    .countries span,
+    .cities span,
+    .directions span,
+    .airport span,
+    .airlines span,
+    .services span {
+        font-size: 0;
+    }
+
+    .countries a:last-child:after,
+    .cities a:last-child:after,
+    .directions a:last-child:after,
+    .airport a:last-child:after,
+    .airlines a:last-child:after,
+    .services a:last-child:after {
+        content: ">";
+        color: #d5d8dc;
+        margin-top: auto;
+    }
+
+    .countries,
+    .cities,
+    .directions,
+    .airport,
+    .airlines,
+    .services {
+        display: flex;
+        justify-content: space-between;
+        margin: 0 10px;
+        padding-top: 5px;
+    }
+
+    .airlines a:last-child {
+        padding-top: 0;
+    }
+
+    .services a:last-child {
+        padding-top: 0;
+    }
+
+    .container-footer-end {
+        flex-direction: column;
+    }
+
+    .left-side {
+        flex-direction: column;
+        padding-bottom: 10px;
+    }
+
+    .affiliate-program {
+        justify-content: center;
+        margin-right: 0;
+        margin-bottom: 15px;
+        padding: 5px 0;
+    }
+
+    .google-play,
+    .app-store {
+        margin-left: 0;
+    }
+
+    .composition-footer hr {
+        display: none;
+    }
 }
