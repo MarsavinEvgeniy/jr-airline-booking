@@ -57,7 +57,7 @@ body {
 }
 
 .lang:before {
-    content: url("/src/icons/lang.svg");
+    content: url("../icons/lang.svg");
     margin-right: 5px;
 }
 
