@@ -1076,4 +1076,15 @@ body {
     .passengers-and-class-block {
         padding: 5px 15px;
     }
+
+    .menu-sections {
+        margin-left: 2%;
+    }
+    .main-content,
+    .composition-footer{
+        width: 100%;
+    }
+    .container-search{
+        width: 98%;
+    }
 }
