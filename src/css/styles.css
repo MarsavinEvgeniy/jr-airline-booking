@@ -782,7 +782,7 @@ body {
 }
 
 .rating-airlines:before {
-    content: url('/src/icons/star.svg');
+    content: url("/src/icons/star.svg");
     margin-right: 5px;
 }
 
