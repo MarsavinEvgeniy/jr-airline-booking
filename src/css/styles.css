@@ -125,8 +125,8 @@ body {
 
 .container-search {
     display: flex;
-    flex-direction: row;
-    height: 60px;
+    width: 82%;
+    gap: 10px;
 }
 
 .container-search-menu {
@@ -134,47 +134,31 @@ body {
     border: none;
     border-radius: 3px;
     display: flex;
-    flex-direction: row;
-    padding-top: 10px;
-    width: 50%;
-}
-
-
-.create-line {
-    border-left: 2px solid #afaaaa;
-    bottom: 10px;
-    height: 60px;
-    margin-right: 10px;
-    opacity: 0.5;
-    position: relative;
-}
-
-.create-line-center {
-    border-left: 2px solid #afaaaa;
-    bottom: 20px;
-    height: 60px;
-    margin-right: 10px;
-    opacity: 0.5;
-    position: relative;
-}
-
-.create-line-container-search-menu {
-    border-left: 2px solid #afaaaa;
-    height: 20px;
-    opacity: 0.5;
-    margin-right: 10px;
+    flex-basis: 100%;
+    gap: 15px;
+    flex-wrap: wrap;
+    padding: 0;
 }
 
 .city-from {
     align-items: center;
     display: flex;
+    border-right: rgb(171, 166, 166, 0.6) 1px solid;
+    padding-left: 15px;
+    flex-basis: 22%;
 }
 
 #city-from-input {
     display: flex;
     flex-direction: column;
     font-size: 16px;
-    width: 200px;
+}
+
+.city-to {
+    align-items: center;
+    display: flex;
+    flex-basis: 22%;
+    border-right: rgb(171, 166, 166, 0.6) 1px solid;
 }
 
 #city-from-input:focus,
@@ -188,7 +172,6 @@ body {
     flex-direction: row;
     font-size: 16px;
     opacity: 0.5;
-    width: 200px;
 }
 
 .city-from-dropdown-content,
@@ -303,12 +286,22 @@ body {
 }
 
 .date-flight {
+    align-items: center;
+    border-right: rgb(171, 166, 166, 0.6) 1px solid;
     display: flex;
     flex-direction: row;
+    flex-basis: 22%;
+    gap: 15px;
     opacity: 0.5;
+    padding-right: 30px;
 }
-
+.date-back{
+    display: flex;
+    align-items: center;
+    margin-right: 15px;
+}
 .date-fromDate {
+    border-right: rgb(171, 166, 166, 0.6) 1px solid;
     width: 100px;
 }
 
@@ -320,8 +313,9 @@ body {
     width: 100px;
 }
 
-.icon-calendar:after {
+.date-back:after {
     content: "📅";
+    margin-left: 30px;
 }
 
 #city-from-input,
@@ -331,8 +325,14 @@ body {
 }
 
 .passengers-and-class-block {
+    align-items: center;
     display: flex;
-    flex-direction: row;
+    flex-basis: 22%;
+}
+
+.passengers-and-class-block div:first-child{
+    display: flex;
+    flex-direction: column;
 }
 
 #passengers-and-class {
@@ -351,7 +351,6 @@ body {
     color: var(--main-color-two);
     display: flex;
     flex-direction: row;
-    margin-left: 5px;
     padding: 22px 35px;
 }
 
@@ -847,6 +846,7 @@ body {
 .container-footer-icons {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .container-footer-text h4 {
@@ -941,10 +941,6 @@ body {
 
     .container-nav-menu {
         margin-right: 10px;
-    }
-
-    .container-search-menu {
-
     }
 
     .container-proposals {
@@ -1058,5 +1054,26 @@ body {
 
     .composition-footer hr {
         display: none;
+    }
+
+    .container-search {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .container-search-menu{
+        gap: 0;
+    }
+
+    .city-from, .city-to, .date-flight {
+        width: 100%;
+        border-right: 0;
+        border-bottom:  rgb(171, 166, 166, 0.6) 1px solid;
+        padding: 5px 15px;
+        flex-basis: 100%;
+    }
+
+    .passengers-and-class-block {
+        padding: 5px 15px;
     }
 }
