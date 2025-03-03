@@ -77,7 +77,7 @@ body {
 .language li:after,
 .flights:after,
 .help:after {
-    content: url("/src/icons/bullet.svg");
+    content: url("../icons/bullet.svg");
     margin-left: 5px;
 }
 
@@ -364,7 +364,7 @@ body {
 }
 
 .complex-route:before {
-    content: url("/src/icons/route.svg");
+    content: url("../icons/route.svg");
     margin-right: 8px;
 }
 
@@ -782,7 +782,7 @@ body {
 }
 
 .rating-airlines:before {
-    content: url("/src/icons/star.svg");
+    content: url("../icons/star.svg");
     margin-right: 5px;
 }
 
