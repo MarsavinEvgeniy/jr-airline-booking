@@ -1087,4 +1087,7 @@ body {
     .container-search{
         width: 95%;
     }
+    .container-search-btn {
+        justify-content: center;
+    }
 }
