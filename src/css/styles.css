@@ -1078,13 +1078,13 @@ body {
     }
 
     .menu-sections {
-        margin-left: 2%;
+        margin-left: 5%;
     }
     .main-content,
     .composition-footer{
-        width: 100%;
+        width: 90%;
     }
     .container-search{
-        width: 98%;
+        width: 95%;
     }
 }
