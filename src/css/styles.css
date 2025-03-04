@@ -295,11 +295,13 @@ body {
     opacity: 0.5;
     padding-right: 30px;
 }
-.date-back{
+
+.date-back {
     display: flex;
     align-items: center;
     margin-right: 15px;
 }
+
 .date-fromDate {
     border-right: rgb(171, 166, 166, 0.6) 1px solid;
     width: 100px;
@@ -330,7 +332,7 @@ body {
     flex-basis: 22%;
 }
 
-.passengers-and-class-block div:first-child{
+.passengers-and-class-block div:first-child {
     display: flex;
     flex-direction: column;
 }
@@ -900,6 +902,13 @@ body {
 
 .left-side {
     display: flex;
+    flex-direction: row;
+    padding-bottom: 10px;
+}
+
+.left-side div{
+    display: flex;
+    text-align: center;
 }
 
 .affiliate-program {
@@ -1035,18 +1044,6 @@ body {
         flex-direction: column;
     }
 
-    .left-side {
-        flex-direction: column;
-        padding-bottom: 10px;
-    }
-
-    .affiliate-program {
-        justify-content: center;
-        margin-right: 0;
-        margin-bottom: 15px;
-        padding: 5px 0;
-    }
-
     .google-play,
     .app-store {
         margin-left: 0;
@@ -1061,14 +1058,14 @@ body {
         gap: 15px;
     }
 
-    .container-search-menu{
+    .container-search-menu {
         gap: 0;
     }
 
     .city-from, .city-to, .date-flight {
         width: 100%;
         border-right: 0;
-        border-bottom:  rgb(171, 166, 166, 0.6) 1px solid;
+        border-bottom: rgb(171, 166, 166, 0.6) 1px solid;
         padding: 5px 15px;
         flex-basis: 100%;
     }
@@ -1080,14 +1077,33 @@ body {
     .menu-sections {
         margin-left: 5%;
     }
+
     .main-content,
-    .composition-footer{
+    .composition-footer {
         width: 90%;
     }
-    .container-search{
+
+    .container-search {
         width: 95%;
     }
+
     .container-search-btn {
         justify-content: center;
+    }
+
+    .left-side {
+        flex-direction: column;
+    }
+    .left-side div {
+        display: flex;
+        gap:8px
+    }
+
+    .affiliate-program{
+        justify-content: center;
+        margin-bottom: 15px;
+        margin-left: 20px;
+        padding: 5px 0;
+        width: 80%;
     }
 }
