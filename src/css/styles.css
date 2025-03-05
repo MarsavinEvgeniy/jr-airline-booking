@@ -1105,10 +1105,12 @@ body {
     .bus-tickets img{
         display: none;
     }
-    .manage-your-tickets-on-Telegram {
+    .manage-your-tickets-on-Telegram,
+    .bus-tickets {
         padding-bottom: 30px;
     }
-    .manage-your-tickets-on-Telegram li{
+    .manage-your-tickets-on-Telegram li,
+    .bus-tickets  li{
         width: 100%;
     }
 }
