@@ -1097,4 +1097,19 @@ body {
     .container-search-btn {
         justify-content: center;
     }
+
+    .left-side{
+        flex-direction: column;
+    }
+    .left-side div {
+        gap: 10px;
+    }
+
+    .affiliate-program{
+        justify-content: center;
+        margin-bottom: 15px;
+        margin-left: 20px;
+        padding: 5px 0;
+        width: 80%;
+    }
 }
