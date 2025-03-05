@@ -161,6 +161,12 @@ body {
     border-right: rgb(171, 166, 166, 0.6) 1px solid;
 }
 
+#city-from-input:focus,
+#city-to-input:focus {
+    outline: 0;
+    outline-offset: 0;
+}
+
 #city-to-input {
     display: flex;
     flex-direction: row;
@@ -284,17 +290,60 @@ body {
     border-right: rgb(171, 166, 166, 0.6) 1px solid;
     display: flex;
     flex-direction: row;
+    flex-basis: 22%;
+    gap: 15px;
     opacity: 0.5;
+    padding-right: 30px;
+}
+
+.date-back {
+    display: flex;
+    align-items: center;
+    margin-right: 15px;
+}
+
+.date-fromDate {
+    border-right: rgb(171, 166, 166, 0.6) 1px solid;
+    width: 100px;
+}
+
+.date-toDate {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    text-align: center;
+    width: 100px;
+}
+
+.date-back:after {
+    content: "📅";
+    margin-left: 30px;
+}
+
+#city-from-input,
+#city-to-input {
+    border: rgb(0, 0, 0, 0);
+    margin-left: 0;
 }
 
 .passengers-and-class-block {
     align-items: center;
     display: flex;
+    flex-basis: 22%;
 }
 
 .passengers-and-class-block div:first-child {
     display: flex;
     flex-direction: column;
+}
+
+#passengers-and-class {
+    border: rgb(0, 0, 0, 0);
+}
+
+#passengers-and-class:focus {
+    outline: 0;
+    outline-offset: 0;
 }
 
 .container-search-btn {
@@ -857,7 +906,7 @@ body {
     padding-bottom: 10px;
 }
 
-.left-side div{
+.left-side div {
     display: flex;
     text-align: center;
 }
@@ -995,6 +1044,13 @@ body {
         flex-direction: column;
     }
 
+    .affiliate-program {
+        justify-content: center;
+        margin-right: 0;
+        margin-bottom: 15px;
+        padding: 5px 0;
+    }
+
     .google-play,
     .app-store {
         margin-left: 0;
@@ -1040,21 +1096,5 @@ body {
 
     .container-search-btn {
         justify-content: center;
-    }
-
-    .left-side {
-        flex-direction: column;
-    }
-    .left-side div {
-        display: flex;
-        gap:8px
-    }
-
-    .affiliate-program{
-        justify-content: center;
-        margin-bottom: 15px;
-        margin-left: 20px;
-        padding: 5px 0;
-        width: 80%;
     }
 }
