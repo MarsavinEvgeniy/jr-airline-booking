@@ -315,8 +315,9 @@ body {
 }
 
 .date-back:after {
-    content: "📅";
+    content: url("../icons/calendar4.svg");
     margin-left: 30px;
+    margin-top: 5px;
 }
 
 #city-from-input,
@@ -365,8 +366,10 @@ body {
 }
 
 .complex-route:before {
-    content: url("../icons/route.svg");
+    content: url("../icons/multiroute.svg");
     margin-right: 8px;
+    position: relative;
+    top: 7px;
 }
 
 .calendar-container {
@@ -608,25 +611,32 @@ body {
 
 .manage-your-tickets-on-Telegram {
     grid-area: line-1-1;
-    padding: 10px 20px 60px 20px;
+    padding: 10px 20px 0 20px;
 }
 
-.manage-your-tickets-on-Telegram ul {
+.manage-your-tickets-on-Telegram ul,
+.bus-tickets ul{
     list-style: none;
     padding-inline-start: 0;
+    padding-bottom: 10px
 }
 
-.manage-your-tickets-on-Telegram li {
+.manage-your-tickets-on-Telegram li,
+.bus-tickets li{
     display: inline-block;
 }
 
-.manage-your-tickets-on-Telegram li:before {
+.manage-your-tickets-on-Telegram li:before,
+.bus-tickets li:before {
     content: '✔';
     top: 0;
     left: 0;
     color: green;
 }
-
+.manage-your-tickets-on-Telegram h3,
+.bus-tickets h3{
+    margin: 8px 0 -5px 0;
+}
 .manage-your-tickets-on-Telegram a {
     background: #f8dcd6;
     border-radius: 5px;
@@ -638,23 +648,7 @@ body {
 
 .bus-tickets {
     grid-area: line-1-2;
-    padding: 10px 20px 60px 20px;
-}
-
-.bus-tickets ul {
-    list-style: none;
-    padding-inline-start: 0;
-}
-
-.bus-tickets li {
-    display: inline-block;
-}
-
-.bus-tickets li:before {
-    content: '✔';
-    top: 0;
-    left: 0;
-    color: green;
+    padding: 10px 20px 0 20px;
 }
 
 .bus-tickets a {
@@ -663,7 +657,12 @@ body {
     text-decoration: none;
     color: var(--main-color-two);
     padding: 10px 20px;
+    margin-top: 40px;
     cursor: pointer;
+}
+
+.bus-tickets img {
+    margin-right: -20px;
 }
 
 .popular-destinations {
@@ -695,15 +694,6 @@ body {
 .price-popular-destinations {
     color: var(--accent-color);
     margin-left: auto;
-}
-
-.bus-tickets button {
-    background: var(--accent-color);
-    border-radius: 5px;
-    border: none;
-    color: var(--main-color-two);
-    padding: 10px 20px;
-    cursor: pointer;
 }
 
 .top-airlines div {
@@ -1109,5 +1099,16 @@ body {
         margin-left: 20px;
         padding: 5px 0;
         width: 80%;
+    }
+
+    .manage-your-tickets-on-Telegram img,
+    .bus-tickets img{
+        display: none;
+    }
+    .manage-your-tickets-on-Telegram {
+        padding-bottom: 30px;
+    }
+    .manage-your-tickets-on-Telegram li{
+        width: 100%;
     }
 }
