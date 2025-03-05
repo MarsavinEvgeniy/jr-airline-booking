@@ -174,12 +174,12 @@ body {
     opacity: 0.5;
 }
 
-.city-from-dropdown-content,
+.city-content-name,
 .selected-city-code {
     color: rgb(171, 166, 166);
 }
 
-.selected-city-container {
+.selected-data-city {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -263,28 +263,27 @@ body {
     padding: 5px 0;
 }
 
-.city-to-dropdown-content {
+.city-from-data-name,
+.city-to-data-name {
     color: rgb(171, 166, 166);
 }
 
-.city-to-dropdown-content,
-.city-from-dropdown-content {
+.city-to-data-name,
+.city-from-data-name {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
 
-.city-from-dropdown-list div,
-.city-to-dropdown-content div {
-    padding: 8px 0;
+.selected-data-city {
+    margin: 4px 0;
 }
 
-.city-to-dropdown-content-code,
-.city-to-dropdown-content-code,
-.selected-city-code {
-    text-transform: uppercase;
+.city-from-data-name div,
+.city-to-data-name div,
+.selected-data-city{
+    padding: 7px 0;
 }
-
 .date-flight {
     align-items: center;
     border-right: rgb(171, 166, 166, 0.6) 1px solid;
@@ -1070,11 +1069,10 @@ body {
     }
 
     .city-from, .city-to, .date-flight {
-        width: 100%;
         border-right: 0;
         border-bottom: rgb(171, 166, 166, 0.6) 1px solid;
-        padding: 5px 15px;
         flex-basis: 100%;
+        padding: 5px 15px;
     }
 
     .passengers-and-class-block {
