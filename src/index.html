@@ -46,6 +46,7 @@
                                 <input style="position: relative" id="city-from-input" type="text" name="city-from"
                                        value="Варшава" readonly/>
                             </label>
+                            <span class="icon-swap"></span>
                         </div>
                     </div>
                     <div class="city-to">
@@ -198,7 +199,10 @@
             <div class="city-from-dropdown-list">
                 <div class="selected-city" style="font-weight: bold; font-size: 12px">Выбранный город</div>
                 <div class="selected-data-city">
-                    <div class="city"></div>
+                    <div style="display: flex; align-items: center">
+                        <span class="map-marker">map-marker</span>
+                        <div class="city"></div>
+                    </div>
                     <div class="code"></div>
                 </div>
                 <div style="font-weight: bold; font-size: 12px">Ближайшие аэрапорты</div>
@@ -240,7 +244,10 @@
                 </section>
                 <section class="babies-passengers">
                     <div>
-                        <div>Младенцы</div>
+                        <div style="display: flex">
+                            <div>Младенцы</div>
+                            <span class="icon-help">Помощь</span>
+                        </div>
                         <div style="color: rgb(171, 166, 166); font-size: 10px">до 2 лет</div>
                     </div>
                     <div class="passenger-counter">
@@ -488,6 +495,7 @@
                         <input type="email" name="email" placeholder="Email*" required>
                     </label>
                     <button><span>Подписаться</span></button>
+                    <img class="exclamation" src="icons/exclamation.svg" alt="">
                 </form>
             </div>
         </article>
