@@ -211,6 +211,10 @@ body {
     width: 200px;
 }
 
+.passengers-and-class-dropdown-list span:first-child {
+    color: rgb(171, 166, 166);
+}
+
 .adult-passengers,
 .children-passengers,
 .babies-passengers {
@@ -225,34 +229,69 @@ body {
     margin: 0 5px;
 }
 
-.passengers-class {
+.passenger-counter {
+    display: flex;
+    text-align: center;
+}
+
+.passenger-counter span {
+    margin-top: 9px;
+}
+
+.passengers-class-data {
     box-sizing: border-box;
     display: flex;
     flex-direction: row;
     font-size: 12px;
     justify-content: space-between;
-    list-style: none;
     margin: 0;
     padding-inline-start: 0;
 }
 
-.passengers-class li {
+.passengers-class-data label {
     box-shadow: 0 1px 1px rgb(171, 166, 166);
     border-radius: 20px;
     padding: 10px;
+    color: rgb(171, 166, 166);
 }
 
-.passengers-class li:hover {
-    background-color: var(--accent-color);
-    color: var(--main-color-two);
-}
-
-.passengers-class input[type="radio"] {
+.passengers-class-data input[type="radio"] {
     display: none;
 }
 
-.passengers-class label {
+.passengers-class-data input[type="radio"]:checked + label,
+.passengers-class-data label:hover{
+    background-color: var(--accent-color);
+    border-color: var(--accent-color);
+    color: var(--main-color-two);
+}
+
+.passengers-class-data label {
     cursor: pointer;
+}
+
+.minus-bth,
+.plus-bth {
+    font-size: 0;
+    border-radius: 50%;
+    height: 30px;
+    border: none;
+    cursor: pointer;
+}
+
+.plus-bth {
+    background-color: white;
+    box-shadow: 0 1px 8px rgb(171, 166, 166);
+}
+
+.minus-bth:before {
+    content: url("../icons/minus-thin.svg");
+    margin-right: -10px;
+}
+
+.plus-bth:after {
+    content: url("../icons/plus-thin.svg");
+    margin-left: -8px;
 }
 
 .passengers-bth {
@@ -261,6 +300,7 @@ body {
     border-radius: 5px;
     color: var(--main-color-two);
     padding: 5px 0;
+    cursor: pointer;
 }
 
 .city-from-data-name,
@@ -281,9 +321,10 @@ body {
 
 .city-from-data-name div,
 .city-to-data-name div,
-.selected-data-city{
+.selected-data-city {
     padding: 7px 0;
 }
+
 .date-flight {
     align-items: center;
     border-right: rgb(171, 166, 166, 0.6) 1px solid;
@@ -335,15 +376,6 @@ body {
 .passengers-and-class-block div:first-child {
     display: flex;
     flex-direction: column;
-}
-
-#passengers-and-class {
-    border: rgb(0, 0, 0, 0);
-}
-
-#passengers-and-class:focus {
-    outline: 0;
-    outline-offset: 0;
 }
 
 .container-search-btn {
@@ -615,14 +647,14 @@ body {
 }
 
 .manage-your-tickets-on-Telegram ul,
-.bus-tickets ul{
+.bus-tickets ul {
     list-style: none;
     padding-inline-start: 0;
     padding-bottom: 10px
 }
 
 .manage-your-tickets-on-Telegram li,
-.bus-tickets li{
+.bus-tickets li {
     display: inline-block;
 }
 
@@ -633,10 +665,12 @@ body {
     left: 0;
     color: green;
 }
+
 .manage-your-tickets-on-Telegram h3,
-.bus-tickets h3{
+.bus-tickets h3 {
     margin: 8px 0 -5px 0;
 }
+
 .manage-your-tickets-on-Telegram a {
     background: #f8dcd6;
     border-radius: 5px;
@@ -1086,14 +1120,15 @@ body {
         justify-content: center;
     }
 
-    .left-side{
+    .left-side {
         flex-direction: column;
     }
+
     .left-side div {
         gap: 10px;
     }
 
-    .affiliate-program{
+    .affiliate-program {
         justify-content: center;
         margin-bottom: 15px;
         margin-left: 20px;
@@ -1102,15 +1137,17 @@ body {
     }
 
     .manage-your-tickets-on-Telegram img,
-    .bus-tickets img{
+    .bus-tickets img {
         display: none;
     }
+
     .manage-your-tickets-on-Telegram,
     .bus-tickets {
         padding-bottom: 30px;
     }
+
     .manage-your-tickets-on-Telegram li,
-    .bus-tickets  li{
+    .bus-tickets li {
         width: 100%;
     }
 }

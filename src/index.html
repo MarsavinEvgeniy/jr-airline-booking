@@ -43,7 +43,8 @@
                         <div>
                             <span style="font-size: 10px; opacity: 0.5; margin-left: 3px">Откуда</span>
                             <label for="city-from-input">
-                                <input style="position: relative" id="city-from-input" type="text" name="city-from" value="Варшава" readonly/>
+                                <input style="position: relative" id="city-from-input" type="text" name="city-from"
+                                       value="Варшава" readonly/>
                             </label>
                         </div>
                     </div>
@@ -58,16 +59,16 @@
                         </div>
                         <div class="date-toDate">
                             <div class="date-back">Обратно</div>
-                            <span class="icon-calendar"></span>
                         </div>
                     </div>
                     <div class="passengers-and-class-block">
                         <div>
                             <span style="font-size: 10px; opacity: 0.5; margin-left: 3px">Пассажиры&#44; класс</span>
-                            <label for="passengers-and-class">
-                                <input id="passengers-and-class" type="text" name="text" value="1 пассажир&#44; любой"
-                                       readonly/>
-                            </label>
+                            <div class="passengers-and-class" style="display:flex; flex-direction: row">
+                                <span class="passengers-counter">1 пассажир</span>
+                                <span>&#44; &nbsp;</span>
+                                <span class="passengers-class">любой</span>
+                            </div>
                         </div>
                     </div>
                 </fieldset>
@@ -220,10 +221,10 @@
                         <div>Взрослые</div>
                         <div style="color: rgb(171, 166, 166); font-size: 10px">Старше 12 лет</div>
                     </div>
-                    <div>
-                        <button>-</button>
-                        <span>1</span>
-                        <button>+</button>
+                    <div class="passenger-counter">
+                        <button class="minus-bth"><span>минус</span></button>
+                        <span class="counter">1</span>
+                        <button class="plus-bth"><span>плюс</span></button>
                     </div>
                 </section>
                 <section class="children-passengers">
@@ -231,10 +232,10 @@
                         <div>Дети</div>
                         <div style="color: rgb(171, 166, 166); font-size: 10px">2-12 лет</div>
                     </div>
-                    <div>
-                        <button>-</button>
-                        <span>0</span>
-                        <button>+</button>
+                    <div class="passenger-counter">
+                        <button class="minus-bth"><span>минус</span></button>
+                        <span class="counter">0</span>
+                        <button class="plus-bth"><span>плюс</span></button>
                     </div>
                 </section>
                 <section class="babies-passengers">
@@ -242,32 +243,25 @@
                         <div>Младенцы</div>
                         <div style="color: rgb(171, 166, 166); font-size: 10px">до 2 лет</div>
                     </div>
-                    <div>
-                        <button>-</button>
-                        <span>0</span>
-                        <button>+</button>
+                    <div class="passenger-counter">
+                        <button class="minus-bth"><span>минус</span></button>
+                        <span class="counter">0</span>
+                        <button class="plus-bth"><span>плюс</span></button>
                     </div>
                 </section>
                 <hr style="width: 100%;opacity: 0.3">
                 <span>Класс</span>
-                <ul class="passengers-class">
-                    <li>
-                        <label>
-                            <input type="radio" name="choince-class"> Любой
-                        </label>
-
-                    </li>
-                    <li>
-                        <label>
-                            <input type="radio" name="choince-class">Бизнес
-                        </label>
-                    </li>
-                    <li>
-                        <label>
-                            <input type="radio" name="choince-class">Эконом
-                        </label>
-                    </li>
-                </ul>
+                <form class="passengers-class-data">
+                    <label>
+                        <input type="radio" name="choice-class" value="любой"> Любой
+                    </label>
+                    <label>
+                        <input type="radio" name="choice-class" value="бизнес">Бизнес
+                    </label>
+                    <label>
+                        <input type="radio" name="choice-class" value="эконом">Эконом
+                    </label>
+                </form>
                 <button class="passengers-bth">Ок</button>
             </div>
         </div>
