@@ -85,7 +85,6 @@ document.querySelectorAll(".city-to-name").forEach(cityName => {
             return;
         }
         cityToInput.value = name;
-        document.querySelector(".city").innerHTML = name;
         showClose(cityToDropdownList);
     })
 });
