@@ -370,7 +370,6 @@ body {
 .passengers-and-class-block {
     align-items: center;
     display: flex;
-    flex-basis: 22%;
 }
 
 .passengers-and-class-block div:first-child {
