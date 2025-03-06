@@ -216,10 +216,16 @@ body {
     font-size: 0;
 }
 
-.map-marker:before,
+.map-marker:before {
+    content: url("../icons/map-marker.svg");
+}
+
 .city-from-name:before,
 .city-to-name:before {
     content: url("../icons/map-marker.svg");
+    position: relative;
+    top: 7px;
+
 }
 
 .passengers-and-class-dropdown-list {
@@ -348,6 +354,10 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+}
+
+.city-to-code {
+    margin-top: 14px;
 }
 
 .selected-data-city {
