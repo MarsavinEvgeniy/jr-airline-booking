@@ -168,6 +168,18 @@ body {
     font-size: 16px;
 }
 
+.close-smooth {
+    font-size: 0;
+}
+
+.close-smooth:after {
+    content: url("../icons/close-smooth.svg");
+    position: relative;
+    bottom: 1px;
+    margin-left: 15px;
+    cursor: pointer;
+}
+
 .city-to {
     align-items: center;
     display: flex;

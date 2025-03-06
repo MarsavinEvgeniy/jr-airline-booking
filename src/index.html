@@ -43,8 +43,7 @@
                         <div>
                             <span style="font-size: 10px; opacity: 0.5; margin-left: 3px">Откуда</span>
                             <label for="city-from-input">
-                                <input style="position: relative" id="city-from-input" type="text" name="city-from"
-                                       value="Варшава" readonly/>
+                                <input style="position: relative" id="city-from-input" type="text" name="city-from" value="Варшава" readonly/>
                             </label>
                             <span class="icon-swap"></span>
                         </div>
@@ -203,7 +202,10 @@
                         <span class="map-marker">map-marker</span>
                         <div class="city"></div>
                     </div>
-                    <div class="code"></div>
+                    <div style="display: flex; flex-direction: row">
+                        <div class="code"></div>
+                        <span class="close-smooth">Очистить</span>
+                    </div>
                 </div>
                 <div style="font-weight: bold; font-size: 12px">Ближайшие аэрапорты</div>
                 <div class="city-from-data-name">

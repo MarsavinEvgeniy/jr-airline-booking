@@ -159,13 +159,22 @@ passengersBth.addEventListener("click", function () {
     }
 
     radiosPassengersClass.forEach((radio) => {
-        if(selectedValue === undefined) {
+        if (selectedValue === undefined) {
             selectedValue = "любой";
-        }else if(radio.checked){
+        } else if (radio.checked) {
             selectedValue = radio.value;
         }
     });
 
     passengersClass.innerHTML = selectedValue;
     showClose(passengersAndClassDropdownList);
+})
+
+const closeSmooth = document.querySelector(".close-smooth");
+
+closeSmooth.addEventListener("click", function () {
+    console.log("342");
+    cityFromInput.value = "";
+    document.querySelector(".city").innerHTML = "";
+    document.querySelector(".code").innerHTML = "";
 })
