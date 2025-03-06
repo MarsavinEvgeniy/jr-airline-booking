@@ -1208,4 +1208,8 @@ body {
     .bus-tickets li {
         width: 100%;
     }
+
+    .icon-swap:after {
+        display: none;
+    }
 }
