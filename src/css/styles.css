@@ -248,7 +248,6 @@ body {
     justify-content: space-between;
 }
 
-.city-to-dropdown-list,
 .city-from-dropdown-list {
     background-color: var(--main-color-two);
     border-radius: 5px;
@@ -257,6 +256,21 @@ body {
     flex-direction: column;
     font-size: 12px;
     position: absolute;
+    top: 16rem;
+    padding: 20px;
+    width: 350px;
+}
+
+.city-to-dropdown-list {
+    background-color: var(--main-color-two);
+    border-radius: 5px;
+    box-shadow: 0 1px 1px rgb(171, 166, 166);
+    display: none;
+    flex-direction: column;
+    font-size: 12px;
+    position: absolute;
+    top: 16rem;
+    left: 38rem;
     padding: 20px;
     width: 350px;
 }
@@ -286,8 +300,10 @@ body {
     font-size: 12px;
     gap: 10px;
     position: absolute;
+    top: 16rem;
+    left: 78rem;
     padding: 20px;
-    width: 200px;
+    width: 230px;
 }
 
 .passengers-and-class-dropdown-list span:first-child {
@@ -1234,5 +1250,21 @@ body {
 
     .swap-icon:after {
         display: none;
+    }
+
+    .city-from-dropdown-list{
+        top: 26.3rem;
+        left: 0;
+    }
+    .city-to-dropdown-list{
+        top: 30.3rem;
+        left: 0;
+    }
+    .passengers-and-class-dropdown-list {
+        top: 38.5rem;
+        left: 18px;
+    }
+    .calendar-container{
+        top:34.2rem;
     }
 }
