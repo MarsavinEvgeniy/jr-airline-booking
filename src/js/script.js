@@ -7,22 +7,22 @@ const cityToDropdownList = document.querySelector(".city-to-dropdown-list");
 const passengersAndClassInput = document.querySelector(".passengers-and-class");
 const passengersAndClassDropdownList = document.querySelector(".passengers-and-class-dropdown-list");
 
-cityFromInput.addEventListener("focus", function (event) {
+cityFromInput.addEventListener("focus", function () {
     document.querySelector(".city-from-span").style.display = "flex";
     cityFromInput.placeholder = "";
-})
-cityToInput.addEventListener("focus", function (event) {
+});
+cityToInput.addEventListener("focus", function () {
     document.querySelector(".city-to-span").style.display = "flex";
     cityToInput.placeholder = "";
-})
-document.querySelector("#date-from-input").addEventListener("focus", function (event) {
+});
+document.querySelector("#date-from-input").addEventListener("focus", function () {
     document.querySelector(".date-from-span").style.display = "flex";
     document.querySelector("#date-from-input").placeholder = "";
-})
-document.querySelector("#date-to-input").addEventListener("focus", function (event) {
+});
+document.querySelector("#date-to-input").addEventListener("focus", function () {
     document.querySelector(".date-to-span").style.display = "flex";
     document.querySelector("#date-to-input").placeholder = "";
-})
+});
 
 const showClose = function (event) {
     if (event.style.display === "flex") {
@@ -92,7 +92,7 @@ document.querySelectorAll(".city-from-name").forEach(cityName => {
         cityFromInput.value = name;
         document.querySelector(".city").innerHTML = name;
         showClose(cityFromDropdownList);
-    })
+    });
 });
 document.querySelectorAll(".city-to-name").forEach(cityName => {
     cityName.addEventListener("click", function (event) {
@@ -144,23 +144,23 @@ const counterMinus = function (event) {
 
 adultPassengersPlusBth.addEventListener("click", function () {
     counterPlus(adultPassengersCounter);
-})
+});
 childrenPassengersPlusBth.addEventListener("click", function () {
     counterPlus(childrenPassengersCounter);
-})
+});
 babiesPassengersPlusBth.addEventListener("click", function () {
     counterPlus(babiesPassengersCounter);
-})
+});
 
 adultPassengersMinusBth.addEventListener("click", function () {
     counterMinus(adultPassengersCounter);
-})
+});
 childrenPassengersMinusBth.addEventListener("click", function () {
     counterMinus(childrenPassengersCounter);
-})
+});
 babiesPassengersMinusBth.addEventListener("click", function () {
     counterMinus(babiesPassengersCounter);
-})
+});
 
 passengersBth.addEventListener("click", function () {
     let selectedValue;
@@ -185,7 +185,7 @@ passengersBth.addEventListener("click", function () {
 
     passengersClass.innerHTML = selectedValue;
     showClose(passengersAndClassDropdownList);
-})
+});
 
 const closeSmooth = document.querySelector(".close-smooth");
 
@@ -194,4 +194,19 @@ closeSmooth.addEventListener("click", function () {
     cityFromInput.value = "";
     document.querySelector(".city").innerHTML = "";
     document.querySelector(".code").innerHTML = "";
-})
+});
+
+const containerSearchBtn = document.querySelector(".container-search-btn");
+
+containerSearchBtn.addEventListener("click", function () {
+    const fromCity = cityFromInput.value;
+    const toCity = cityToInput.value;
+    const counterPassengers = passengersCounter.innerHTML;
+    const classPassengers = passengersClass.innerHTML;
+    console.log(`
+                 Вылет - Откуда: ${fromCity}; куда: ${toCity}.
+                 Дата вылета - туда: ${"Туда"}; обратно: ${"Обратно"}.
+                 Количество пассажиров: ${counterPassengers};
+                 класс комфорта: ${classPassengers}.
+                 `);
+});
