@@ -1,11 +1,28 @@
 const dialogCalendarContainer = document.querySelector(".calendar-container");
 const dateFlightShowCloseDialog = document.querySelector(".date-flight");
-const cityToInput = document.querySelector("#city-to-input");
-const cityToDropdownList = document.querySelector(".city-to-dropdown-list");
 const cityFromInput = document.querySelector("#city-from-input");
+const cityToInput = document.querySelector("#city-to-input");
 const cityFromDropdownList = document.querySelector(".city-from-dropdown-list");
+const cityToDropdownList = document.querySelector(".city-to-dropdown-list");
 const passengersAndClassInput = document.querySelector(".passengers-and-class");
 const passengersAndClassDropdownList = document.querySelector(".passengers-and-class-dropdown-list");
+
+cityFromInput.addEventListener("focus", function (event) {
+    document.querySelector(".city-from-span").style.display = "flex";
+    cityFromInput.placeholder = "";
+})
+cityToInput.addEventListener("focus", function (event) {
+    document.querySelector(".city-to-span").style.display = "flex";
+    cityToInput.placeholder = "";
+})
+document.querySelector("#date-from-input").addEventListener("focus", function (event) {
+    document.querySelector(".date-from-span").style.display = "flex";
+    document.querySelector("#date-from-input").placeholder = "";
+})
+document.querySelector("#date-to-input").addEventListener("focus", function (event) {
+    document.querySelector(".date-to-span").style.display = "flex";
+    document.querySelector("#date-to-input").placeholder = "";
+})
 
 const showClose = function (event) {
     if (event.style.display === "flex") {

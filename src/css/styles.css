@@ -125,47 +125,104 @@ body {
 
 .container-search {
     display: flex;
-    position: relative;
-    width: 82%;
+    align-items: flex-start;
+    flex-wrap: wrap;
     gap: 10px;
 }
 
 .container-search-menu {
+    display: flex;
+    flex-wrap: wrap;
     background-color: var(--main-color-two);
     border: none;
     border-radius: 3px;
-    display: flex;
     flex-basis: 100%;
-    gap: 15px;
-    flex-wrap: wrap;
-    padding: 0;
 }
 
-.icon-swap:after {
-    content: url("../icons/swap.svg");
-    position: absolute;
-    border: 2px solid var(--accent-color);
-    border-radius: 50%;
-    width: 30px;
-    height: 30px;
-    left: 220px;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    pointer-events: none;
-}
 
-.city-from {
+/*.icon-swap:after {*/
+/*    content: url("../icons/swap.svg");*/
+/*    position: absolute;*/
+/*    border: 2px solid var(--accent-color);*/
+/*    border-radius: 50%;*/
+/*    width: 30px;*/
+/*    height: 30px;*/
+/*    left: 220px;*/
+/*    top: 50%;*/
+/*    transform: translate(-50%, -50%);*/
+/*    pointer-events: none;*/
+/*}*/
+
+.city-from,
+.city-to {
     align-items: center;
     display: flex;
-    border-right: rgb(171, 166, 166, 0.6) 1px solid;
-    padding-left: 15px;
-    flex-basis: 22%;
+    border-right: rgb(171, 166, 166) 1px solid;
 }
 
-#city-from-input {
+.passengers-and-class-block {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    position: relative;
+    border: 1px solid rgb(171, 166, 166);
+    padding-left: 15px;
+    width: 15.38rem;
+    border-radius: 0 3px 3px 0;
+}
+
+#city-from-input,
+#city-to-input,
+#date-from-input,
+#date-to-input {
+    display: flex;
     font-size: 16px;
+    height: 60px;
+    border: none;
+    background: none;
+    width: 95%;
+    padding-left: 15px;
+}
+
+#date-from-input,
+#date-to-input {
+    width: 90%;
+}
+
+.swap-icon:after {
+    content: url("../icons/swap.svg");
+    position: absolute;
+    bottom: 24%;
+    left: 304px;
+    border: 1px solid var(--accent-color);
+    border-radius: 50%;
+    height: 29px;
+}
+
+.calendar-icon:after {
+    content: url("../icons/calendar4.svg");
+    position: absolute;
+    bottom: 30%;
+    left: 80%;
+}
+
+.city-from-span,
+.city-to-span,
+.date-from-span,
+.date-to-span {
+    position: absolute;
+    padding-left: 15px;
+    display: none;
+    top: 10px;
+}
+
+#city-from-input:focus,
+#city-to-input:focus,
+#city-from-input:focus,
+#city-from-input:focus,
+#date-from-input:focus,
+#date-to-input:focus {
+    outline-color: #0393f8;
 }
 
 .close-smooth {
@@ -178,26 +235,6 @@ body {
     bottom: 1px;
     margin-left: 15px;
     cursor: pointer;
-}
-
-.city-to {
-    align-items: center;
-    display: flex;
-    flex-basis: 22%;
-    border-right: rgb(171, 166, 166, 0.6) 1px solid;
-}
-
-#city-from-input:focus,
-#city-to-input:focus {
-    outline: 0;
-    outline-offset: 0;
-}
-
-#city-to-input {
-    display: flex;
-    flex-direction: row;
-    font-size: 16px;
-    opacity: 0.5;
 }
 
 .city-content-name,
@@ -382,56 +419,24 @@ body {
     padding: 7px 0;
 }
 
+.city-from-block {
+    border: 1px solid rgb(171, 166, 166);
+    border-radius: 3px 0 0 3px;
+    position: relative;
+    width: 20rem;
+}
+
 .date-flight {
-    align-items: center;
-    border-right: rgb(171, 166, 166, 0.6) 1px solid;
     display: flex;
     flex-direction: row;
-    flex-basis: 22%;
-    gap: 15px;
-    opacity: 0.5;
-    padding-right: 30px;
+    border: 1px solid rgb(171, 166, 166);
+    width: 20rem;
 }
 
-.date-back {
-    display: flex;
-    align-items: center;
-    margin-right: 15px;
-}
-
-.date-fromDate {
-    border-right: rgb(171, 166, 166, 0.6) 1px solid;
-    width: 100px;
-}
-
-.date-toDate {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    text-align: center;
-    width: 100px;
-}
-
-.date-back:after {
-    content: url("../icons/calendar4.svg");
-    margin-left: 30px;
-    margin-top: 5px;
-}
-
-#city-from-input,
-#city-to-input {
-    border: rgb(0, 0, 0, 0);
-    margin-left: 0;
-}
-
-.passengers-and-class-block {
-    align-items: center;
-    display: flex;
-}
-
-.passengers-and-class-block div:first-child {
-    display: flex;
-    flex-direction: column;
+.city-to-block {
+    border: 1px solid rgb(171, 166, 166);
+    position: relative;
+    width: 20rem;
 }
 
 .container-search-btn {
@@ -440,8 +445,10 @@ body {
     border: none;
     color: var(--main-color-two);
     display: flex;
+    height: 64px;
     flex-direction: row;
-    padding: 22px 35px;
+    align-items: center;
+    padding: 0 30px;
 }
 
 .complex-route {
@@ -1145,20 +1152,12 @@ body {
         display: none;
     }
 
+    /*.container-search {*/
+    /*    flex-direction: column;*/
+    /*    gap: 15px;*/
+    /*}*/
     .container-search {
-        flex-direction: column;
-        gap: 15px;
-    }
 
-    .city-from, .city-to, .date-flight {
-        border-right: 0;
-        border-bottom: rgb(171, 166, 166, 0.6) 1px solid;
-        flex-basis: 100%;
-        padding: 5px 15px;
-    }
-
-    .passengers-and-class-block {
-        padding: 5px 15px;
     }
 
     .menu-sections {
@@ -1174,8 +1173,32 @@ body {
         width: 95%;
     }
 
+    .container-form-search-menu {
+        width: 100%;
+    }
+
+    .container-search-menu {
+        flex-direction: column;
+    }
+
+    .city-from-block,
+    .city-to-block,
+    .date-flight {
+        width: 100%;
+        border-top: none;
+        border-right: none;
+        border-left: none;
+    }
+
+    .passengers-and-class-block {
+        border: none;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
     .container-search-btn {
         justify-content: center;
+        width: 100%;
     }
 
     .left-side {
@@ -1209,7 +1232,7 @@ body {
         width: 100%;
     }
 
-    .icon-swap:after {
+    .swap-icon:after {
         display: none;
     }
 }
