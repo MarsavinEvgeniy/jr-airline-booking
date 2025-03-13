@@ -39,14 +39,14 @@
         <div class="container-search">
             <form class="container-form-search-menu" method="post">
                 <div class="container-search-menu">
-                    <div class="city-from-block">
+                    <div tabindex="0" class="city-from-block">
                         <span class="city-from-span" style="font-size: 10px; opacity: 0.5">Откуда</span>
                         <label for="city-from-input"></label>
                         <input style="position: relative" id="city-from-input" type="text" name="city-from"
                                placeholder="Откуда" value=""/>
-                        <span class="swap-icon"></span>
                     </div>
                     <div class="city-to-block">
+                        <button class="swap-icon"><img src="icons/swap.svg" height="30" width="30" style="margin-inline-start: -7px; margin-top: -1px"></button>
                         <span class="city-to-span" style="font-size: 10px; opacity: 0.5">Куда</span>
                         <label for="city-to-input"></label>
                         <input id="city-to-input" type="text" name="city-to-input" placeholder="Куда" value=""/>
@@ -69,7 +69,7 @@
                             <span class="calendar-icon"></span>
                         </div>
                     </div>
-                    <div class="passengers-and-class-block">
+                    <div tabindex="0" class="passengers-and-class-block">
                         <span style="font-size: 10px; opacity: 0.5; margin-left: 3px">Пассажиры&#44; класс</span>
                         <div class="passengers-and-class" style="display:flex; flex-direction: row">
                             <span class="passengers-counter">1 пассажир</span>
@@ -503,8 +503,11 @@
                     <label>
                         <input type="email" name="email" placeholder="Email*" required>
                     </label>
-                    <button><span>Подписаться</span></button>
-                    <img class="exclamation" src="icons/exclamation.svg" alt="">
+                    <div>
+                        <button class="exclamation"><img src="icons/exclamation.svg" width="24" height="24" style="margin-left: -6px; margin-top:-1px" alt=""></button>
+                        <button class="best-offers-subscribe-bth"><span>Подписаться</span></button>
+                    </div>
+
                 </form>
             </div>
         </article>

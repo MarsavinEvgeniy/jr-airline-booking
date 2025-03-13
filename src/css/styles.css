@@ -139,20 +139,6 @@ body {
     flex-basis: 100%;
 }
 
-
-/*.icon-swap:after {*/
-/*    content: url("../icons/swap.svg");*/
-/*    position: absolute;*/
-/*    border: 2px solid var(--accent-color);*/
-/*    border-radius: 50%;*/
-/*    width: 30px;*/
-/*    height: 30px;*/
-/*    left: 220px;*/
-/*    top: 50%;*/
-/*    transform: translate(-50%, -50%);*/
-/*    pointer-events: none;*/
-/*}*/
-
 .city-from,
 .city-to {
     align-items: center;
@@ -169,6 +155,10 @@ body {
     padding-left: 15px;
     width: 15.38rem;
     border-radius: 0 3px 3px 0;
+}
+
+.passengers-and-class-block:focus {
+    border: 2px solid #0393f8;
 }
 
 #city-from-input,
@@ -189,14 +179,15 @@ body {
     width: 90%;
 }
 
-.swap-icon:after {
-    content: url("../icons/swap.svg");
+.swap-icon {
     position: absolute;
-    bottom: 24%;
-    left: 304px;
     border: 1px solid var(--accent-color);
+    background-color: var(--main-color-two);
     border-radius: 50%;
-    height: 29px;
+    margin-inline-start: -1rem;
+    top: 1rem;
+    height: 30px;
+    width: 30px;
 }
 
 .calendar-icon:after {
@@ -218,8 +209,6 @@ body {
 
 #city-from-input:focus,
 #city-to-input:focus,
-#city-from-input:focus,
-#city-from-input:focus,
 #date-from-input:focus,
 #date-to-input:focus {
     outline-color: #0393f8;
@@ -905,12 +894,18 @@ body {
 .best-offers-subscribe {
     display: inline-flex;
     align-items: center;
+    position: relative;
 }
 
 .exclamation {
     position: absolute;
-    margin-bottom: 35px;
-    margin-left: 155px;
+    margin-top: -12px;
+    margin-left: -34px;
+    border-radius: 50%;
+    border: none;
+    border-color: var(--main-color-two);
+    width: 24px;
+    height: 24px;
 }
 
 .best-offers input {
@@ -926,7 +921,7 @@ body {
     color: var(--accent-color);
 }
 
-.best-offers button {
+.best-offers-subscribe-bth {
     background: var(--accent-color);
     border: none;
     border-radius: 3px;
@@ -934,11 +929,11 @@ body {
     padding: 10px 18px;
 }
 
-.best-offers button span {
+.best-offers-subscribe-bth span {
     font-size: 0;
 }
 
-.best-offers button:before {
+.best-offers-subscribe-bth:before {
     content: "❯";
 }
 
@@ -1252,19 +1247,28 @@ body {
         display: none;
     }
 
-    .city-from-dropdown-list{
+    .city-from-dropdown-list {
         top: 26.3rem;
         left: 0;
     }
-    .city-to-dropdown-list{
+
+    .city-to-dropdown-list {
         top: 30.3rem;
         left: 0;
     }
+
     .passengers-and-class-dropdown-list {
         top: 38.5rem;
         left: 18px;
     }
-    .calendar-container{
-        top:34.2rem;
+
+    .calendar-container {
+        top: 34.2rem;
+    }
+
+    .swap-icon {
+        margin-inline-start: 18rem;
+        top: -1rem;
+        transform: rotate(90deg);
     }
 }
