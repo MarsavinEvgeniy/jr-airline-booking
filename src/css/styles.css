@@ -126,17 +126,22 @@ body {
 .container-search {
     display: flex;
     align-items: flex-start;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
+    width: 82%;
     gap: 10px;
+}
+
+.container-form-search-menu {
+    width: 100%;
 }
 
 .container-search-menu {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     background-color: var(--main-color-two);
     border: none;
     border-radius: 3px;
-    flex-basis: 100%;
+    width: 100%;
 }
 
 .city-from,
@@ -153,7 +158,6 @@ body {
     position: relative;
     border: 1px solid rgb(171, 166, 166);
     padding-left: 15px;
-    width: 15.38rem;
     border-radius: 0 3px 3px 0;
 }
 
@@ -428,20 +432,24 @@ body {
     border: 1px solid rgb(171, 166, 166);
     border-radius: 3px 0 0 3px;
     position: relative;
-    width: 20rem;
+}
+
+.city-from-block,
+.city-to-block,
+.date-flight,
+.passengers-and-class-block {
+    width: 25%;
 }
 
 .date-flight {
     display: flex;
     flex-direction: row;
     border: 1px solid rgb(171, 166, 166);
-    width: 20rem;
 }
 
 .city-to-block {
     border: 1px solid rgb(171, 166, 166);
     position: relative;
-    width: 20rem;
 }
 
 .container-search-btn {
@@ -1182,6 +1190,7 @@ body {
 
     .container-search {
         width: 95%;
+        flex-wrap: wrap;
     }
 
     .container-form-search-menu {
@@ -1205,6 +1214,7 @@ body {
         border: none;
         padding-top: 20px;
         padding-bottom: 20px;
+        width: 100%;
     }
 
     .container-search-btn {
