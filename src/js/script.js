@@ -1,5 +1,3 @@
-const dialogCalendarContainer = document.querySelector(".calendar-container");
-const dateFlightShowCloseDialog = document.querySelector(".date-flight");
 const cityFromInput = document.querySelector("#city-from-input");
 const cityToInput = document.querySelector("#city-to-input");
 const cityFromDropdownList = document.querySelector(".city-from-dropdown-list");
@@ -18,8 +16,12 @@ cityToInput.addEventListener("focus", function () {
 document.querySelector("#date-from-input").addEventListener("focus", function () {
     document.querySelector(".date-from-span").style.display = "flex";
     document.querySelector("#date-from-input").placeholder = "";
+    document.querySelector(".date-to-span").style.display = "flex";
+    document.querySelector("#date-to-input").placeholder = "";
 });
 document.querySelector("#date-to-input").addEventListener("focus", function () {
+    document.querySelector(".date-from-span").style.display = "flex";
+    document.querySelector("#date-from-input").placeholder = "";
     document.querySelector(".date-to-span").style.display = "flex";
     document.querySelector("#date-to-input").placeholder = "";
 });
@@ -31,10 +33,6 @@ const showClose = function (event) {
         event.style.display = "flex"
     }
 }
-
-dateFlightShowCloseDialog.addEventListener("click", function () {
-    showClose(dialogCalendarContainer);
-});
 
 cityFromInput.addEventListener("click", function () {
     showClose(cityFromDropdownList);
@@ -190,7 +188,6 @@ passengersBth.addEventListener("click", function () {
 const closeSmooth = document.querySelector(".close-smooth");
 
 closeSmooth.addEventListener("click", function () {
-    console.log("342");
     cityFromInput.value = "";
     document.querySelector(".city").innerHTML = "";
     document.querySelector(".code").innerHTML = "";
@@ -205,8 +202,181 @@ containerSearchBtn.addEventListener("click", function () {
     const classPassengers = passengersClass.innerHTML;
     console.log(`
                  Вылет - Откуда: ${fromCity}; куда: ${toCity}.
-                 Дата вылета - туда: ${"Туда"}; обратно: ${"Обратно"}.
+                 Дата вылета - туда: ${document.querySelector("#date-from-input").value}; обратно: ${document.querySelector("#date-to-input").value}.
                  Количество пассажиров: ${counterPassengers};
                  класс комфорта: ${classPassengers}.
                  `);
 });
+
+const calendarContainer = document.querySelector(".calendar-container");
+
+const monthTemplate = document
+    .querySelector("#calendar-template")
+    .content
+    .querySelector(".calendar-month");
+
+const monthContainer = document.querySelector(".calendar-dates");
+
+const ClassName = {
+    DATE: "calendar-month-dates-day",
+    PAST_DATE: "calendar-month-dates-day-past",
+    TODAY: "calendar-month-dates-day-today",
+};
+
+function getMonth(idx) {
+    const objDate = new Date();
+    objDate.setDate(1);
+    objDate.setMonth(idx);
+
+    return objDate.toLocaleString("ru-RU", {
+        month: "long",
+    });
+}
+
+function getDaysInMonth(month, year) {
+    return new Date(year, month + 1, 0).getDate();
+}
+
+function renderCalendarMonth(
+    container,
+    monthNumber = new Date().getMonth(),
+    yearNumber = new Date().getFullYear(),
+) {
+    const monthElement = monthTemplate.cloneNode(true);
+    // Все изменения в DOM мы производим до отрисовки элемента на страницу
+    // чтобы не вызывать слишком много повторных рендерингов
+
+    const monthNameElement = monthElement.querySelector(".calendar-month-name");
+    monthNameElement.textContent = `${getMonth(monthNumber)} ${yearNumber}`;
+
+    // 1. Взять первый день месяца
+    // 2. Определить день недели этого дня
+    let firstDayInMonth = new Date(yearNumber, monthNumber, 1).getDay();
+    if (firstDayInMonth === 0) {
+        firstDayInMonth = 7;
+    }
+
+    const daysContainer = monthElement.querySelector(".calendar-month-dates-days");
+
+    // 3. До этого дня заполнить контейнер филлерами (пустыми элементами)
+    let daysLeft = firstDayInMonth;
+    while (--daysLeft) {
+        const fillerDate = document.createElement("li");
+        daysContainer.appendChild(fillerDate);
+    }
+
+    // 4. Определить количество дней в месяце
+    const today = new Date();
+    today.setHours(0, 0, 0, 0);
+
+    const daysInMonth = getDaysInMonth(monthNumber, yearNumber);
+    // 5. В цикле заполнить контейнер блоками под дни по их количеству
+    // 6. Попутно отмечая прошедшие дни и текущий день
+
+    for (let day = 1; day <= daysInMonth; day++) {
+        const date = document.createElement("li");
+        const renderedDate = new Date(yearNumber, monthNumber, day, 0, 0, 0, 0);
+
+        date.textContent = `${day}`;
+
+        date.classList.add(ClassName.DATE);
+        date.classList.toggle(ClassName.PAST_DATE, renderedDate - today < 0);
+        date.classList.toggle(ClassName.TODAY, renderedDate - today === 0);
+
+        date.dataset.date = renderedDate.toISOString();
+
+        daysContainer.appendChild(date);
+    }
+
+    container.appendChild(monthElement);
+}
+
+function clearCalendarMonths() {
+    monthContainer.innerHTML = "";
+}
+
+function showCalendarDialog() {
+    calendarContainer.open = true;
+}
+
+function hideCalendarDialog() {
+    calendarContainer.open = false;
+    clearCalendarMonths();
+}
+
+function initializeDatePicker(dateFromElement, dateToElement) {
+    let isCalendarOpen = false;
+
+    const selectedDates = {
+        FROM: null,
+        TO: null,
+    };
+
+    dateFromElement.onfocus = function () {
+        // Fail fast
+        if (isCalendarOpen) {
+            return;
+        }
+
+        showCalendarDialog();
+        renderCalendarMonth(monthContainer, new Date().getMonth());
+        renderCalendarMonth(monthContainer, new Date().getMonth() + 1);
+
+        isCalendarOpen = true;
+    }
+
+    monthContainer.onclick = function (evt) {
+        const isSelectableDateClicked = (
+            evt.target.classList.contains(ClassName.DATE) &&
+            !evt.target.classList.contains(ClassName.PAST_DATE)
+        );
+
+        if (!isSelectableDateClicked) {
+            return;
+        }
+
+        const selectedDate = new Date(evt.target.dataset.date);
+
+        // 1. Если не выбрана никакая дата, первая нажатая дата становится from
+        // 2. Если дата выбрана, вторая нажатая дата становится
+        //   2.1. Если вторая нажатая дата больше или равна выбранной, она становится to
+        //   2.2. Если вторая нажатая дата меньше выбранной, она становится from, а
+        //        выбранная дата становится to
+        if (selectedDates.FROM === null) {
+            selectedDates.FROM = selectedDate;
+        } else {
+            if (selectedDate > selectedDates.FROM) {
+                selectedDates.TO = selectedDate;
+            } else {
+                selectedDates.TO = selectedDates.FROM;
+                selectedDates.FROM = selectedDate;
+            }
+        }
+
+        if (selectedDates.FROM !== null && selectedDates.TO !== null) {
+            dateFromElement.value = selectedDates.FROM.toLocaleString().split(',')[0];
+            dateToElement.value = selectedDates.TO.toLocaleString().split(',')[0];
+
+            hideCalendarDialog();
+            isCalendarOpen = false;
+        }
+    }
+}
+
+initializeDatePicker(
+    document.querySelector("#date-from-input"),
+    document.querySelector("#date-to-input"),
+);
+
+document.querySelector('.swap-icon img').addEventListener("click", function (e){
+    const substitution = cityFromInput.value;
+    cityFromInput.value = cityToInput.value;
+    document.querySelector(".city").innerHTML = cityFromInput.value;
+    for (let mapCityElement of mapCity.values()) {
+        if (mapCityElement.name === cityFromInput.value) {
+            document.querySelector(".code").innerHTML = mapCityElement.code;
+        }
+    }
+    cityToInput.value = substitution;
+    e.preventDefault();
+})

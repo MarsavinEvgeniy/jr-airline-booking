@@ -46,23 +46,23 @@
                                placeholder="Откуда" value=""/>
                     </div>
                     <div class="city-to-block">
-                        <button class="swap-icon"><img src="icons/swap.svg" height="30" width="30" style="margin-inline-start: -7px; margin-top: -1px"></button>
+                        <button class="swap-icon"><img src="icons/swap.svg" height="30" width="30"
+                                                       style="margin-inline-start: -8px; margin-top: -3px"
+                                                       alt="Поменять местами"></button>
                         <span class="city-to-span" style="font-size: 10px; opacity: 0.5">Куда</span>
                         <label for="city-to-input"></label>
                         <input id="city-to-input" type="text" name="city-to-input" placeholder="Куда" value=""/>
                     </div>
                     <div class="date-flight">
                         <div style="position: relative; width: 50%">
-                            <span class="date-from-span"
-                                  style="font-size: 10px; opacity: 0.5">Туда</span>
+                            <span class="date-from-span" style="font-size: 10px; opacity: 0.5">Туда</span>
                             <label for="date-from-input"></label>
                             <input id="date-from-input" type="text" name="date-from-input" placeholder="Туда"
                                    value=""/>
                         </div>
                         <p style="border: 1px solid rgb(171, 166, 166)"></p>
                         <div style="position: relative; width: 50%">
-                            <span class="date-to-span"
-                                  style="font-size: 10px; opacity: 0.5">Обратно</span>
+                            <span class="date-to-span" style="font-size: 10px; opacity: 0.5">Обратно</span>
                             <label for="date-to-input"></label>
                             <input id="date-to-input" type="text" name="date-to-input" placeholder="Обратно"
                                    value=""/>
@@ -81,7 +81,7 @@
             </form>
             <button class="container-search-btn"><span>Найти</span></button>
         </div>
-        <dialog class="calendar-container" open>
+        <dialog class="calendar-container">
             <div class="calendar">
                 <div class="calendar-header">
                     <div class="calendar-label">Выберите дату туда</div>
@@ -94,113 +94,32 @@
                     <button class="calendar-month-control calendar-month-control-fwd">Вперед</button>
                 </div>
                 <div class="calendar-dates">
-                    <div class="calendar-month">
-                        <div class="calendar-month-name">Сентябрь 2024</div>
-                        <div class="calendar-month-dates">
-                            <ul class="calendar-month-date-names">
-                                <li>пн</li>
-                                <li>вт</li>
-                                <li>ср</li>
-                                <li>чт</li>
-                                <li>пт</li>
-                                <li>сб</li>
-                                <li>вс</li>
-                            </ul>
-                            <ul class="calendar-month-dates-days">
-                                <li class="calendar-month-dates-day-past"></li>
-                                <li class="calendar-month-dates-day-past"></li>
-                                <li class="calendar-month-dates-day-past"></li>
-                                <li class="calendar-month-dates-day-past"></li>
-                                <li class="calendar-month-dates-day-past"></li>
-                                <li class="calendar-month-dates-day-past">1</li>
-                                <li class="calendar-month-dates-day-past">2</li>
-                                <li class="calendar-month-dates-day-past">3</li>
-                                <li class="calendar-month-dates-day-past">4</li>
-                                <li class="calendar-month-dates-day-past">5</li>
-                                <li class="calendar-month-dates-day-past">6</li>
-                                <li class="calendar-month-dates-day-past">7</li>
-                                <li class="calendar-month-dates-day-past">8</li>
-                                <li class="calendar-month-dates-day-past">9</li>
-                                <li class="calendar-month-dates-day-past">10</li>
-                                <li class="calendar-month-dates-day-past">11</li>
-                                <li class="calendar-month-dates-day-past">12</li>
-                                <li class="calendar-month-dates-day-past">13</li>
-                                <li class="calendar-month-dates-day-past">14</li>
-                                <li class="calendar-month-dates-day-past">15</li>
-                                <li class="calendar-month-dates-day-past">16</li>
-                                <li class="calendar-month-dates-day-past">17</li>
-                                <li class="calendar-month-dates-day-past">18</li>
-                                <li class="calendar-month-dates-day-past">19</li>
-                                <li class="calendar-month-dates-day-past">20</li>
-                                <li class="calendar-month-dates-day-past">21</li>
-                                <li class="calendar-month-dates-day-past">22</li>
-                                <li class="calendar-month-dates-day-past">23</li>
-                                <li class="calendar-month-dates-day-past">24</li>
-                                <li class="calendar-month-dates-day-past">24</li>
-                                <li class="calendar-month-dates-day-past">25</li>
-                                <li class="calendar-month-dates-day-past">26</li>
-                                <li class="calendar-month-dates-day-today">27</li>
-                                <li>28</li>
-                            </ul>
-                        </div>
-                    </div>
 
-                    <div class="calendar-month">
-                        <div class="calendar-month-name">Май 2024</div>
-                        <div class="calendar-month-dates">
-                            <ul class="calendar-month-date-names">
-                                <li>пн</li>
-                                <li>вт</li>
-                                <li>ср</li>
-                                <li>чт</li>
-                                <li>пт</li>
-                                <li>сб</li>
-                                <li>вс</li>
-                            </ul>
-                            <ul class="calendar-month-dates-days">
-                                <li></li>
-                                <li></li>
-                                <li></li>
-                                <li></li>
-                                <li></li>
-                                <li>1</li>
-                                <li>2</li>
-                                <li>3</li>
-                                <li>4</li>
-                                <li class="calendar-month-dates-day-from">5</li>
-                                <li class="calendar-month-dates-day-in-range">6</li>
-                                <li class="calendar-month-dates-day-in-range">7</li>
-                                <li class="calendar-month-dates-day-in-range">8</li>
-                                <li class="calendar-month-dates-day-in-range">9</li>
-                                <li class="calendar-month-dates-day-in-range">10</li>
-                                <li class="calendar-month-dates-day-in-range">11</li>
-                                <li class="calendar-month-dates-day-in-range">12</li>
-                                <li class="calendar-month-dates-day-in-range">13</li>
-                                <li class="calendar-month-dates-day-to">14</li>
-                                <li>15</li>
-                                <li>16</li>
-                                <li>17</li>
-                                <li>18</li>
-                                <li>19</li>
-                                <li>20</li>
-                                <li>21</li>
-                                <li>22</li>
-                                <li>23</li>
-                                <li>24</li>
-                                <li>24</li>
-                                <li>25</li>
-                                <li>26</li>
-                                <li>27</li>
-                                <li>28</li>
-                            </ul>
-                        </div>
-                    </div>
                 </div>
                 <div class="calendar-note">
                     Для отображения цен необходимо выбрать маршрут
                 </div>
             </div>
         </dialog>
+
+        <template id="calendar-template">
+            <div class="calendar-month">
+                <div class="calendar-month-name">Сентябрь 2024</div>
+                <div class="calendar-month-dates">
+                    <ul class="calendar-month-date-names">
+                        <li>пн</li>
+                        <li>вт</li>
+                        <li>ср</li>
+                        <li>чт</li>
+                        <li>пт</li>
+                        <li>сб</li>
+                        <li>вс</li>
+                    </ul>
+                    <ul class="calendar-month-dates-days">
+                    </ul>
+                </div>
+            </div>
+        </template>
         <div class="complex-route">Сложный маршрут</div>
         <div class="city-from-dropdown-list">
             <div class="selected-city" style="font-weight: bold; font-size: 12px">Выбранный город</div>
@@ -280,14 +199,13 @@
             </form>
             <button class="passengers-bth">Ок</button>
         </div>
-        </div>
     </section>
 </header>
 <main class="main-content">
     <section class="container-proposals">
         <article class="manage-your-tickets-on-Telegram">
             <h3>Управляйте вашими билетами в Telegram</h3>
-            <div style="display: flex; flex-direction: row; gap: 5px">
+            <div style="display: flex; flex-direction: row; gap: 5px; justify-content: space-between">
                 <div>
                     <ul>
                         <li>Доступ к билетам и кабинету</li>
@@ -296,12 +214,15 @@
                     </ul>
                     <a href="#">Посмотреть возможности</a>
                 </div>
-                <img src="img/telegramChat.png" width="180" height="145" alt="telegram chat picture">
+                <div>
+                    <img src="img/telegramChat.png" width="155" height="145" alt="telegram chat picture">
+                </div>
+
             </div>
         </article>
         <article class="bus-tickets">
             <h3>Билеты на автобус по Китаю и Европе</h3>
-            <div style="display: flex; flex-direction: row; gap: 5px">
+            <div style="display: flex; flex-direction: row; gap: 5px; justify-content: space-between">
                 <div>
                     <ul>
                         <li>Удобное сравнение цен</li>
@@ -309,7 +230,9 @@
                     </ul>
                     <a href="#">Найти билеты</a>
                 </div>
-                <img src="img/bus.png" width="180" height="135" alt="bus picture">
+                <div>
+                    <img src="img/bus.png" width="180" height="99" alt="bus picture">
+                </div>
             </div>
         </article>
     </section>
@@ -391,8 +314,11 @@
             </div>
         </article>
         <article class="top-airlines">
-            <h3 class="title-case"><span>топ-10</span> авиакомпаний</h3>
-            <a href="#" class="top-airlines-details">подробнее</a>
+            <div style="display: flex; justify-content: space-between">
+                <h3 class="title-case"><span>топ-10</span> авиакомпаний</h3>
+                <a href="#" class="top-airlines-details">Подробнее</a>
+            </div>
+
             <div class="top-airlines-block">
                 <div>
                     <div class="top-airlines-element-block">
@@ -504,7 +430,8 @@
                         <input type="email" name="email" placeholder="Email*" required>
                     </label>
                     <div>
-                        <button class="exclamation"><img src="icons/exclamation.svg" width="24" height="24" style="margin-left: -6px; margin-top:-1px" alt=""></button>
+                        <button class="exclamation"><img src="icons/exclamation.svg" width="24" height="24"
+                                                         style="margin-left: -6px; margin-top:-1px" alt=""></button>
                         <button class="best-offers-subscribe-bth"><span>Подписаться</span></button>
                     </div>
 

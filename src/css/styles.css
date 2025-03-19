@@ -180,7 +180,7 @@ body {
 
 #date-from-input,
 #date-to-input {
-    width: 90%;
+    width: 70%;
 }
 
 .swap-icon {
@@ -189,9 +189,10 @@ body {
     background-color: var(--main-color-two);
     border-radius: 50%;
     margin-inline-start: -1rem;
-    top: 1rem;
-    height: 30px;
-    width: 30px;
+    top: 1.1rem;
+    height: 27px;
+    width: 27px;
+    cursor: pointer;
 }
 
 .calendar-icon:after {
@@ -462,6 +463,7 @@ body {
     flex-direction: row;
     align-items: center;
     padding: 0 30px;
+    cursor: pointer;
 }
 
 .complex-route {
@@ -485,7 +487,6 @@ body {
     border: 0;
     border-radius: 2px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-    display: none;
 }
 
 .calendar {
@@ -688,7 +689,7 @@ body {
 
 .bus-tickets,
 .popular-destinations div,
-.top-airlines div,
+.top-airlines-block,
 .frequently-asked-questions div,
 .manage-your-tickets-on-Telegram,
 .airline-ticket-hot-sales div {
@@ -773,6 +774,7 @@ body {
 
 .bus-tickets img {
     margin-right: -20px;
+    margin-top: 40px;
 }
 
 .popular-destinations {
@@ -806,11 +808,8 @@ body {
     margin-left: auto;
 }
 
-.top-airlines div {
-    grid-area: line-2-2;
-}
-
 .top-airlines-block {
+    grid-area: line-2-2;
     display: flex;
     justify-content: space-between;
     padding: 10px 20px;
@@ -840,18 +839,13 @@ body {
     color: #3cadfb;
 }
 
-.title-case {
-    display: inline-block;
-}
-
 .title-case span {
     text-transform: uppercase;
 }
 
 .top-airlines-details {
-    margin-left: 50px;
-    text-decoration: none;
     font-size: 12px;
+    margin-top:23px;
 }
 
 .top-airlines article {
