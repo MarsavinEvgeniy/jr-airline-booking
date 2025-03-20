@@ -632,11 +632,11 @@ body {
 }
 
 .calendar-month-dates-day-from::before {
-    content: "Туда"
+    content: "Туда";
 }
 
 .calendar-month-dates-day-to::before {
-    content: "Обратно"
+    content: "Обратно";
 }
 
 .calendar-month-dates-day-in-range {
@@ -795,7 +795,7 @@ body {
     padding-left: 20px;
     padding-top: 10px;
     padding-bottom: 10px;
-    width: 45%;
+    width: 46%;
 }
 
 .popular-destinations-container {
