@@ -783,6 +783,7 @@ body {
 
 .popular-destinations-block {
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
 }
 
@@ -790,22 +791,24 @@ body {
     border-top: 1px solid #d5d8dc;
 }
 
-.popular-destinations-element-block {
-    display: inline-flex;
-    padding-left: 20px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    width: 46%;
+.popular-destinations-container {
+    display: flex;
+    justify-content: space-between;
 }
 
-.popular-destinations-container {
-    width: 100%;
-    font-size: 14px;
+.popular-destinations-element-block {
+    display: inline-flex;
+    padding: 10px 20px;
+    width: 45%;
 }
 
 .price-popular-destinations {
     color: var(--accent-color);
     margin-left: auto;
+}
+
+.price-popular-destinations p {
+    text-transform: lowercase;
 }
 
 .top-airlines-block {
